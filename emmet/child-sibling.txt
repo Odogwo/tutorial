@@ -1,0 +1,17 @@
+CHILD >
+
+what is shortcut for child of navigation, ul and li?
+nav>ul>li
+
+what is the shortcut for child of div,p and span?
+
+
+SIBLING +
+what is the sibling of div, p and blockquote?
+div+p+bq
+
+what is the sibling of div, div?
+
+
+CLIMP_UP ^
+git

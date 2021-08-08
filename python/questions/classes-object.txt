@@ -1,0 +1,88 @@
+CLASSSES AND OBJECT
+
+Source; Tutorialpoint pdf
+
+What is a class?
+A user-defined prototype for an object 
+that defines a set of attributes 
+that characterize any object of the class
+
+what are atrributes?
+The attributes are data members 
+(class variables and instance variables) and methods, 
+accessed via dot notation. 
+
+what is a class variable?
+ A variable that is shared by all instances of a class. 
+Class variables are defined within a class but outside any of the class's methods
+
+
+what is an instanc evariable?
+IA variable that is defined inside a method and 
+belongs only to the current instance of a class. 
+
+
+then what is an instance?
+Instance: An individual object of a certain class. 
+An object obj that belongs to a class 
+
+Circle, for example, is an instance of the class Circle. 
+
+whaich of the variables are used most?
+Class variables are not used as frequently as instance variables are. . 
+
+what is adata memeber?
+Data member: A class variable or instance variable 
+that holds data associated with a class and its objects.
+
+what is function overloading
+Function overloading: The assignment of more than one behavior to a particular function. 
+The operation performed varies by the types of objects or arguments involved
+
+what is an inheritance?
+Inheritance: The transfer of the characteristics of a class to other classes 
+that are derived from it. 
+
+what is Instantiation?
+The creation of an instance of a class
+
+what is method?
+A special kind of function that is defined in a class definition. 
+
+what is an object?
+Object is A unique instance of a data structure 
+it is  defined by its class. 
+
+what does an object comprise of ?
+An object comprises both data members 
+(class variables and instance variables) and methods
+
+what are data members?
+class variables and instance variables
+
+what is operator overloading?
+Operator overloading is The assignment of more than one function to a particular operator. 
+
+
+CREATING LASSES
+what creata class definition ?
+The class statement creates a new class definition
+
+how is theclass statement like?
+ The name of the class immediately follows the keyword class 
+followed by a colon as follows: 
+
+class ClassName: 
+   'Optional class documentation string' 
+   class_suit
+
+how do you acces the class diocuementation string?
+The class has a documentation string, which can be accessed via:
+>>> ClassName.__doc__.
+
+what is the class suite?
+The class_suite consists of all the component statements 
+defining class members, data attributes and functions.
+
+
+ANALYSIS OF SIMPLE CLASS IN PYTHON (pg 261 -- tutorial point, python)
