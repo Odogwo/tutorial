@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Event Handling  </title>
+</head>
+<body>
+	<h1>Event Handling </h1>
+
+
+<p id='p_name'></p>
+ <a href="JavaScript:void(0)", onclick="alert('Hello')">Say Hello</a><br> <!-- do not reload the page␣
+˓→-->
+
+<a href="", onclick="alert('Hello')">Say Bye</a><br> <!-- reload the page -->
+
+<a href="JavaScript:void(0)", onclick="alertMessage('Bye via function')">Bye-function</a><br>
+<a href="JavaScript:void(0)",
+
+onmouseover="this.style.color='red'",
+onmouseleave="this.style.color='blue'",
+onmouseup="this.text='Not clicked'",
+onmousedown="this.text='You clicked me'">
+Not clicked
+</a><br>
+
+
+<script type="text/javascript">
+
+function alertMessage(message){
+alert(message)
+}
+
+
+	 
+	</script>
+
+</body>
+</html>
