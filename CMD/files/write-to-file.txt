@@ -1,0 +1,28 @@
+
+
+Write from commnad line new file
+	echo some text >file.txt
+
+
+
+Write into exisitng file 
+	echo  new line>> ExistingFile.txt
+
+
+move text and append it to exisitng file
+	TYPE file.txt >> ExistingFile.txt
+
+
+Type from commnad line into a file
+	TYPE CON > Newfile.txt
+	(use CTRL Z to end writing)
+
+
+create newfile and write into it from commnad line
+	copy con file.txt
+
+
+
+
+
+

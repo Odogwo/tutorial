@@ -1,0 +1,5 @@
+
+Show the folder/ path you are are on
+	echo %cd%
+
+

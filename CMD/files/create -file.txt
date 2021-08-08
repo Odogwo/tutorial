@@ -1,0 +1,6 @@
+
+Create a file without content od any type
+	type nul>file.txt
+
+
+

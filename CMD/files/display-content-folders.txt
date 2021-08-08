@@ -1,0 +1,24 @@
+Display Content of file in CMD 
+	more file.txt
+	type file.txt
+
+
+List files in folder
+	dir
+
+
+list files in all folder
+	dir /s
+
+
+list files that begin with b
+	dir b*
+
+
+LIST files in columns
+	dir /D
+
+
+List files in lower case
+	dir /L
+

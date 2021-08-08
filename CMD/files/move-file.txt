@@ -1,0 +1,5 @@
+
+Redirect output into a new file:
+	TYPE file.txt > Newfile.txt
+
+
