@@ -1,0 +1,8 @@
+movie_title = models.CharField(max_length=150)
+
+
+NOTES
+add a field for the movie's title. 
+
+This field is a Django models.CharField() or character field 
+that takes in a maximum of 150 characters of text

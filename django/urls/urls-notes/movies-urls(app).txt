@@ -1,0 +1,7 @@
+
+Connect a path to the view
+
+urls.py .....so the view renders in the browser. 
+
+
+If you don't have a URL path that connects to the views.py function, make sure to add one to main > urls.py so the view renders in the browser. 

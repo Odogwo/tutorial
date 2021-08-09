@@ -1,0 +1,21 @@
+
+SOURCES
+	Django models are sources of information and behaviors stored within a single database table
+
+
+BLUEPRINT
+	Think of a Django model as a blueprint.
+
+FIELDS
+	Each model is comprised of Django model fields that require user input.
+
+
+MODEL OBJECTS
+	Once the user completes the required fields, a model object is saved in the database
+
+ACCESSING INFORMATION
+	The model's information is then accessible via a queryset, a callable collection of the model objects.
+
+
+QUERYSET
+	queryset, a callable collection of the model objects.

@@ -1,0 +1,7 @@
+
+Field 
+	movie_poster = models.ImageField(upload_to='images/', null=True)
+
+
+MEANING
+	null=True so the file is not required.

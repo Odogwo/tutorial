@@ -1,0 +1,27 @@
+
+_____IN VIRTUAL ENVIRONMENT__________
+
+
+
+SHOW INFORMATION ON A PARTICULER PACKAGE
+	$ pip show requests
+
+
+DISPLAY ALL NAMES OF PACKAGES INSTALLED 
+	$ pip list
+
+
+PUT PACKAGES IN REQUIREMNTS>TXT
+	$ pip freeze > requirements.txt
+	$ more requirements.txt
+
+
+UPGARDE A PARTICULAR PACKAGES
+	(tutorial-env) $ python -m pip install --upgrade requests
+
+
+UNINSTALL PACKAGES
+	(tutorial-env) $ pip uninstall requests
+
+
+

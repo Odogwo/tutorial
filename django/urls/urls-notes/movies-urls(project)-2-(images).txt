@@ -1,0 +1,18 @@
+from django.contrib import admin
+from django.urls import path, include
+from django.conf import settings #add this
+from django.conf.urls.static import static #add this
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include ('main.urls')),
+]
+
+if settings.DEBUG: #add this
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+
+NOTE
+
+Now in the mysite > urls.py add the code above to create a URL path to the media images uploaded to your project. This configuration is only for development, hence the if statement for debugging. In deployment, you will need to configure your static and media files for production.

@@ -1,0 +1,14 @@
+
+
+Make Django migrations to create the model in the database
+
+	py manage.py makemigrations
+
+	NOTE
+
+	To use the model in the Django admin, we need to makemigrations and create the model that maps to a single database table.
+
+
+	WHEN
+		whenevr we added a new field to model we should run this 
+		we riun this first and run py manage.py migrate 

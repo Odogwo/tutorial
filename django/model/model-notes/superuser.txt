@@ -1,0 +1,8 @@
+
+Create an admin username and password
+
+	py manage.py createsuperuser
+
+	create username and password
+
+	This is the username and password needed to access the project's admin site so be sure to remember them.

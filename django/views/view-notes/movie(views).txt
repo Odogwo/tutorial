@@ -1,0 +1,26 @@
+
+
+Render the model in the template(movies)
+
+	from django.shortcuts import render
+	from .models import Movie
+
+	# Create your views here.
+	def movies(request):
+		movies = Movie.objects.all() #queryset containing all movies we just created
+		return render(request=request, template_name="main/movies.html", context={'movies':movies})
+
+
+
+NOTE example (movies)
+	go to the view function (def movies())
+
+	of the template (movies.html) you want to render movies, 
+
+	to the function, add a queryset 
+		movies = Movie.objects.all() 
+			#queryset containing all movies we just created 
+
+	Then in the return render, 
+		set movies as the context returned 
+			when the template displays. 

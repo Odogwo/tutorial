@@ -1,0 +1,25 @@
+
+movie_poster = models.ImageField(upload_to='images/', null=True)
+
+
+
+WHAT HAPPENED
+	Add an image upload field ---
+	env > mysite > main > models.py
+
+
+
+NOTES
+	movie_poster = models.ImageField(upload_to='images/', null=True)
+
+	a field for uploading images to a model, 
+	it just requires a little more configuration to the project. 
+
+	ImageField that specifies the upload will go to a folder named 'images/'. 
+
+	We will also add null=True so the file is not required.
+
+
+
+GO SETTINGS CONFIGURATIONS
+	see settings image

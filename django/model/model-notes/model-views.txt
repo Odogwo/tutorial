@@ -1,0 +1,5 @@
+
+render the model in a template. To do this, go to the view function of the template you want to render
+
+CHECK (MOVIES)
+	view-snippet/movies-view.txt

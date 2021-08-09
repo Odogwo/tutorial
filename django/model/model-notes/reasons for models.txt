@@ -1,0 +1,24 @@
+
+
+REQUIRED 
+	Django models are technically not required 
+	but are highly recommended.
+
+	but are ultimately not required for unchanging or rarely changing site information.
+
+
+PURPOSE
+	It is good practice to use Django models whenever possible to minimize repetitive code 
+
+
+
+WHY USE MODELS 
+	Use Django models when you need to dynamically load information in your project.
+
+
+EXAMPLE
+	eg article model
+	use articletitle, url slug content as fields
+	usesame template for each artcle
+	that is dynamically loading queryset based on user request
+

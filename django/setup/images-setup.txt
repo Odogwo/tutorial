@@ -1,0 +1,6 @@
+
+INTALLATION
+	pip install Pillow
+
+NOTE 
+	For the media upload to work correct, install Pillow in your activated virtual environment.

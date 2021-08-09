@@ -1,0 +1,11 @@
+
+MODEL OBJECTS
+	Once the user completes the required fields, a model object is saved in the database
+
+
+
+
+ADDING MORE MODEL objects
+	Add as many movies as you'd like to the Django admin. Then when you reload the HTML template page in the browser, all of the new model objects will appear in the same format as the first. 
+
+	If you ever want to delete a model object, go to the admin, click on the object, and find the "Delete" button at the bottom of the edit page.

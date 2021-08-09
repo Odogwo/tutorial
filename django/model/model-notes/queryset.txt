@@ -1,0 +1,7 @@
+
+QUERYSET
+	queryset, a callable collection of the model objects.
+
+
+ACCESSING INFORMATION
+	The model's information is then accessible via a queryset, a callable collection of the model objects.

@@ -1,0 +1,22 @@
+
+
+
+
+
+FIELDS
+	Each model is comprised of Django model fields that require user input.
+
+
+
+BASIC DJANGO MODEL fields
+	models.DateField() 				to add a publication date
+	models.BooleanField() 			to add a checkbox
+	models.SlugField() 				or models.URLField() to add a URL link
+	models.DecimalField() 		to add numbers with decimal places
+
+
+
+EXAMPLE
+	Adding basic Django model fields
+
+	env > mysite > main > models.p

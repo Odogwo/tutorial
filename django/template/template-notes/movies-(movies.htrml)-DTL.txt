@@ -1,0 +1,35 @@
+
+    <div class="container p-4">
+      <div class="row">
+        {% for m in movies %}
+        <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+          <div class="card h-100 p-4">
+            <h4>{{m.movie_title}}</h4>
+            <p class="text-muted">{{m.release_year}} | {{m.director}}</p>
+            <p>{{m.movie_plot}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+
+
+   NOTES
+
+   Create a for loop 
+   		{% for m in movies %} 
+
+   		movies being the context we passed in the views function 
+   		m being the shorthand reference to movies within the loop.
+
+	call on all of the fields we specified earlier in the models.py to render all of the information we added in the Django admin.
+
+		{{m.movie_title}}, 
+		{{m.release_year}}, 
+		{{m.director}}, 
+		{{m.movie_plot}} 
+		directly within the HTML elements, as if they were regular text.
+
+	close the for loop with the tag 
+		{% endfor %}.

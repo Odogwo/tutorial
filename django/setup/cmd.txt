@@ -1,0 +1,17 @@
+Redirect output into a new file
+	TYPE file.txt > Newfile.txt
+
+Append output to an existing file:
+	TYPE file.txt >> Newfile.txt
+
+Type in commnad line into a file
+	TYPE CON > Newfile.txt
+	use CTRL Z to end
+
+
+Display Content of file in CMD 
+	more file.txt
+	type file.txt
+
+
+Checking

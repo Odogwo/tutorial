@@ -1,0 +1,6 @@
+
+We are using Bootstrap to help render the template but we will use Django Template Language (DTL) to render the model.
+
+ 
+
+Django Template Language (DTL) to render the model.

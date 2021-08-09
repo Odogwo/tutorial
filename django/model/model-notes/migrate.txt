@@ -1,0 +1,15 @@
+
+Migrate the model to the database
+
+	py manage.py migrate
+
+
+	NOTE
+	Now with the table created, we can migrate the model so all of the information uploaded to the model will be saved to the Django database, db.sqilte3. 
+
+
+
+	WHEN
+		whenever we added a new field to model we should run py  manage.py makemigrations
+
+		 and run py manage.py migrate 

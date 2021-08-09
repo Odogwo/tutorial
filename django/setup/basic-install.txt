@@ -1,0 +1,26 @@
+VIRTUAL ENVIRONMENT
+
+	python3 -m venv tutorial-env
+	tutorial-env\Scripts\activate.bat
+
+
+CHECK PYTHON VERSION
+
+	(tutorial-env) $ python
+	>>> import sys
+	>>> sys.path
+
+INSTALL DJANGO
+
+	(tutorial-env) $ pip install -upgrade pip
+
+	(tutorial-env) $ py -m pip install Django
+
+CHECK DJANGO VERSION
+	(tutorial-env) $ python
+	>>> import django
+	>>> print(django.get_version())
+	>>> exit()
+
+STORE PACKAGES IN TXT
+	(tutorial-env) $ pip freeze > requirements.txt

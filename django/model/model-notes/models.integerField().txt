@@ -1,0 +1,5 @@
+release_year = models.IntegerField()
+
+
+NOTE
+Next, add an IntegerField for the release year

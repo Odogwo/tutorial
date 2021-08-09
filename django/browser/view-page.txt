@@ -1,0 +1,4 @@
+
+Once the model is added to the template, run the server and go to the URL that renders the template containing the model.
+
+The Django model object you added to the admin should appear as if it were hardcoded in the template as a Bootstrap movie card.

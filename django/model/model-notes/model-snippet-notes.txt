@@ -1,0 +1,48 @@
+from django.db import models
+
+# Create your models here.
+
+class Movie(models.Model):
+	movie_title = models.CharField(max_length=150)
+	release_year = models.IntegerField()
+	director = models.CharField(max_length=100)
+	movie_poster = models.ImageField(upload_to='images/', null=True)
+	movie_plot = models.TextField()
+
+	def __str__(self):
+		return self.movie_title
+
+
+MOVIES
+
+MODEL FEATURES 
+
+	MODEL
+		class Movie
+
+	MODEL MOVIES FIELDS
+		title
+		release_year
+		director
+		movie_plot
+
+
+	MODEL MOVIES PURPOSE
+		The model list popular movies
+
+
+THE FUNCTION: DISPALY NAME
+	function that returns movie title as the display name
+
+
+
+IMAGES NOTES
+	movie_poster = models.ImageField(upload_to='images/', null=True)
+
+	a field for uploading images to a model, 
+	it just requires a little more configuration to the project. 
+
+	ImageField that specifies the upload will go to a folder named 'images/'. 
+
+	We will also add null=True so the file is not required.
+

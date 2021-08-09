@@ -1,0 +1,7 @@
+movie_plot = models.TextField()
+
+
+NOTE
+the movie's plot using Django models.Textfield(). 
+
+This field allows paragraph text submissions.

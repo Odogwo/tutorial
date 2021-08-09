@@ -1,0 +1,13 @@
+
+steps
+	models.py
+	settings
+	install pillow
+	project/urls
+	migrations-Migrate
+	admin
+	createsuperuser
+	admin site
+	views.py
+	app/urls
+	app/template/app/movies.html

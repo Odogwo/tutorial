@@ -1,0 +1,6 @@
+Connect a path to the view
+
+EXAMPLE (movies)
+    env > mysite > main > urls.py
+
+    GOTO URLS APP(MOVIES)

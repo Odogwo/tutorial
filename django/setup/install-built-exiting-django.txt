@@ -1,0 +1,12 @@
+
+IN VIRTUAL ENVIRONMENT
+
+git clone https://github.com/django/djangoproject.git
+
+cd djangoproject
+
+pip install -r requirements.txt
+ OR
+ 	python -m pip install -r requirements.txt	
+
+py manage.py runserver

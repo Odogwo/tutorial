@@ -1,0 +1,23 @@
+
+Go to http://127.0.0.1:8000/admin/ 
+
+
+login to the Django administration page with the username and password just created
+
+
+ADMIN SITE
+	Go to http://127.0.0.1:8000/admin/ 
+	login in to Django administration site and create our model objects,
+
+
+
+OBSERVATION
+	Upon login, you will see an interface with the model "Movies" listed below "Main", the name for your app.
+
+
+WHAT TO DO IN THE INTERFACE
+	Add a model object to the Django admin
+	Now let's add a movie to the model.
+	click , themn add
+
+	the fields we added to the model in models.py. will appear

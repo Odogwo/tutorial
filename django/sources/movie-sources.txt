@@ -1,0 +1,2 @@
+
+https://www.ordinarycoders.com/blog/article/django-models

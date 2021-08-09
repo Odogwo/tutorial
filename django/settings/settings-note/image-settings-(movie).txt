@@ -1,0 +1,12 @@
+Configure settings.py
+
+env > mysite > mysite > settings.py
+
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+In settings.py, we need to specify a media uploads folder for the images upload to the movie_poster model field. The media folder will hold all of the images uploaded in the Django admin by a user instead of having to add the images directly to the project's static image folder

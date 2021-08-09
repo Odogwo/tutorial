@@ -1,0 +1,28 @@
+
+EXAMPLE
+	template-app-snippet/movies-------
+
+
+	Add BootstrapCDN to the Django template
+
+	env > mysite > main > templates > main > movies.html
+
+
+	We are using Bootstrap to help render the template
+
+
+	IMAGE
+
+		EXAMPLE
+			movie-()-3-add.......
+
+			NOTE
+				add image field to the template
+
+				use image HTML element 
+
+				<img src="{{ m.movie_poster.url }}" class="card-img-top" alt="{{ m.movie_title}}">
+
+				The class attribute is a custom Bootstrap class
+
+

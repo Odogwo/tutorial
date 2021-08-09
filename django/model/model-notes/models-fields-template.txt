@@ -1,0 +1,13 @@
+
+template
+	render the queryset using a for loop in the template
+
+
+RENDER MODEL IN TEMPLATE 
+	go to views.py ()
+
+
+
+ADD django models fields to templates
+	SEE template app/snippet (2) dtl
+	env > mysite > main > templates > main > movies.html
