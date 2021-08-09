@@ -1,0 +1,51 @@
+
+Product name: Jaybird X3
+
+Product type: Wireless Earphones
+
+Product description: Sports earbuds with a secure fit for athletic performance
+
+Affiliate url: 
+
+Product image: jaybird-x3.jpg
+
+
+Django admin > Main > Products > Add product > Apple Airpods
+
+Product name: Apple Airpods
+
+Product type: Wireless Earbuds
+
+Product description: Active noise cancellation and quick access to voice assistant
+
+Affiliate url: 
+
+Product image: apple-airpods.jpg
+
+ 
+
+Save and add another > ASTRO A40
+
+Product name: ASTRO A40
+
+Product type: Gaming Headset
+
+Product description: Adjustable & lightweight with removable mic
+
+Affiliate url: 
+
+Product image: astro-a40.jpg
+
+ 
+
+Save and add another > Beats Studio3 Wireless
+
+Product name: Beats Studio3 Wireless
+
+Product type: On-Ear Headphones
+
+Product description: Up to 22 hour battery life, noise cancelling headphones
+
+Affiliate url:
+
+Product image: beats-studio3.jpg
