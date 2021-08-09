@@ -1,0 +1,16 @@
+
+SETUP VIERTUAL ENV
+
+	pip install venv
+
+	py -m venv jup
+
+	cd jup
+
+	Scripts\activate
+
+
+DEACTIAVTE
+	deactivate
+
+

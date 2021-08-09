@@ -1,0 +1,15 @@
+
+FROM VIRTUALENV 
+
+SETUP
+
+	(venv) pip install jupyterlab
+
+	(venv)jupyter notebook
+
+CLOSE
+	ctrl + C
+
+
+
+

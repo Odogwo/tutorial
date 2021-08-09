@@ -1,3 +1,25 @@
 (tutorial-env) $ cd tutorial-env
 
 (tutorial-env) $ 
+
+django-admin startproject mysite
+cd mysite
+
+py manage.py startapp main
+
+
+y manage.py runserver
+
+
+NOTE
+
+jango-admin is the command-line utility for administrative tasks. startproject is the function inside the django-admin file that actually creates the project and mysite is the arbitrary name we gave to the project. Together, this line of code creates a new Django folder named mysite with some basic Django project folders within it.
+
+
+A Django app is not like an app on your phone. Instead it should be thought of as a component of your web app that will contain the logic for displaying and connecting HTML documents.
+
+Enter the mysite directory folder and create the main app of the project. manage.py is a Python script to execute different functions and startapp is the function we call to actually create our app. main is the arbitrary name we give to our Django app.
+
+
+
+runserver is a function to establish a connection to your local device. Specifically the connection is an IP connection; it allows you to connect to an IP address, called 127.0.0.1, in your browser. This will act as your development server that only you can access. When your web app is finished, you will run the web app on a production server so anyone can access it

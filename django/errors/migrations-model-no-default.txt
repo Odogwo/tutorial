@@ -1,0 +1,27 @@
+You are trying to add a non-nullable field 'product_description' to product without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option:
+
+So you have few options:
+
+Give a default value, which will be applied to all existing records.
+Make the field optional (ie, set null=True).
+Give it a default value in models (default="No Description")
+Just pick an option and then migrate will work.
+
+
+MY TAKE
+    null=True
+
+
+    class Product(models.Model):
+    product_name = models.CharField(max_length=150, null=True)
+    product_type = models.CharField(max_length=25,null=True)
+    product_description = models.TextField(default="No Description")
+    affiliate_url = models.SlugField(blank=True, null=True)
+    product_image = models.ImageField(upload_to='images/', null=True)
+
+    def __str__(self):
+        return self.product_name

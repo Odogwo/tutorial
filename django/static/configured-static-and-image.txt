@@ -1,0 +1,52 @@
+
+create static 
+	env > mysite > (New Folder) static > (New Folder) img
+
+
+Configure settings.py for static images
+	
+
+		INSTALLED_APPS = [
+		    'main.apps.MainConfig', 
+				...
+				...
+		    'django.contrib.staticfiles',
+		]
+
+		...
+
+
+		STATIC_URL = '/static/'
+
+		STATICFILES_DIRS = [
+   			os.path.join(BASE_DIR, "static"),
+   			]
+
+
+Template Addition (home.html)
+		 {% load static %}
+
+
+
+Home.html (used in images )
+
+	<!--CTA-->
+<div class="container py-5">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-6 pb-4">
+      <h1 class="display-4 font-weight-bold">Elevate your listening</h1>
+      <h5>Everyday headphones that make your favorite artists sound like their performing a never-ending encore.</h5>
+      <a class="btn btn-primary mt-2" href="/products">FIND YOUR SET</a>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6">
+      <img src="{% static 'img/cta-headphones.jpg' %}" alt="Headphones">
+    </div>
+  </div>
+</div>
+
+
+
+Home .html (resize images )
+	<div class="col-sm-12 col-md-12 col-lg-6">
+	<img class="img-fluid rounded" src="{% static 'img/cta-headphones.jpg' %}" alt="Headphones">
+</div>

@@ -1,0 +1,22 @@
+
+FROM VIRTUALENV 
+
+SETUP
+	pip install venv
+
+	py -m venv jup
+
+	cd jup
+
+	Scripts\activate
+
+	(venv) pip install jupyterlab
+
+	(venv)jupyter notebook
+
+CLOSE
+	ctrl + C
+
+
+
+
