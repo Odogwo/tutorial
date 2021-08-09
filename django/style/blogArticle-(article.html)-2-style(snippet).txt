@@ -1,0 +1,23 @@
+
+...
+
+    <style>
+        .article-banner { 
+            background-image:
+            /* The image fade to white */
+            linear-gradient(to left, rgba(0,0,0,0) 10%, #fff 85%),
+            /* The image used */
+            url("{{ article.article_image.url }}");
+            /* Set a specific height */
+            height:200px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: auto;
+            position: relative;
+        }
+    </style>
+
+    {% endblock %}

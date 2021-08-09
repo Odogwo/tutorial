@@ -1,0 +1,2 @@
+
+Add an anchor tag with the href attribute /{{b.article_slug}} immediately after the start of the for loop. Close the anchor tag before the end of the for loop. Then add the style attribute text-decoration:none to the opening anchor tag so the information within the anchor tag is not underlined when a user hovers over the conten

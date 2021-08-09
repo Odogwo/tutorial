@@ -1,0 +1,7 @@
+
+
+
+Within the column, nest a new row that will have two columns, one column for the article image and the other for the article title and text. Add my-auto to both columns so they are vertically centered with one another.
+
+
+In the first column nest the article image url and in the second column add the article title, publication date, and content. Add |safe to the article_content so TinyMCE will render the text we added to the Django admin then add |truncatewords:25 immediately after to only allow the first 25 words to appear when the article's content is called. The last thing is to add a "View post" button to the right column

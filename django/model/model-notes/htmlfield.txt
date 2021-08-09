@@ -1,0 +1,5 @@
+
+	article_content = HTMLField()
+
+
+	article_content.  HTMLField will give us TinyMCE's text editor that comes with a handful of style and formatting features.

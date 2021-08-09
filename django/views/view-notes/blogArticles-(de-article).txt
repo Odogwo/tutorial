@@ -1,0 +1,5 @@
+
+
+Create a new function called article with the two parameters request and article_page. Then create a new variable within the function called article that gets the specific Article object that matches the article_page being requested.  Finally return the HTML template article.html and the context article.
+
+We are able to pass article_page as a parameter in the function since we surrounded the variable in <>'s in the previous step.  

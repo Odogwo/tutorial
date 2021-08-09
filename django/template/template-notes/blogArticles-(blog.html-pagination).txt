@@ -1,0 +1,1 @@
+After the for loop and closing division element of the row, add a container containing the pagination variables similar to the products page

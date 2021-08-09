@@ -1,0 +1,8 @@
+
+pip install django-tinymce4-lite
+	
+	TinyMCE, an online text editor that will help you create blog articles from the Django admin. This HTML editor is designed to make adding content to your website easier by providing a basic word processor
+
+
+
+	

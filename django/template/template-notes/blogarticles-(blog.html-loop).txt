@@ -1,0 +1,16 @@
+
+
+        <div class="row">
+            {% for b in blog %}
+                <div class="col-12 pb-4 text-dark">
+                    
+                </div>
+            {% endfor %}
+        </div>
+
+
+It's time to render the queryset of articles on the blog.html page. 
+
+Let's start by creating a row and adding the Django template language so we can iterate over the queryset we passed. 
+
+Now add a column within the for loop that has dark text, padding at the bottom, and always takes up the entire row with col-12.

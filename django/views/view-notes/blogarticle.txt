@@ -1,0 +1,3 @@
+Import Article at the top of the page.  For the article function, we are going to pass the Article objects as context just like in the products function.  However, we also add order_by('-article_published') so the articles are always listed from newest to oldest publication date.
+
+Let's also use Django pagination. Add the three paginator variables and pass blog_obj as context then save the file

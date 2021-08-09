@@ -1,0 +1,2 @@
+
+Import Article at the top of admin.py and register the Article model to the admin site so it will appear on the Django admin web page

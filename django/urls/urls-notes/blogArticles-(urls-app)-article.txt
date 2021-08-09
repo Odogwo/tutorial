@@ -1,0 +1,2 @@
+
+Add a path for an article page to urls.py.  You'll notice article_page is surrounded by <>.  This will allow articles with different slugs to be directed to the same view.

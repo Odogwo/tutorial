@@ -1,0 +1,20 @@
+
+{% extends "main/header.html" %}
+
+    {% block content %}
+
+    <!--Blog-->
+    <div class="container py-5">
+        <h1 class="font-weight-bold">Articles</h1>
+        <hr>
+        <br>
+        <div class="row">
+            {% for b in blog %}
+                <div class="col-12 pb-4 text-dark">
+                    
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% endblock %

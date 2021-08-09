@@ -1,0 +1,14 @@
+
+
+{% extends "main/header.html" %}
+
+    {% block content %}
+
+    <!--Blog-->
+    <div class="container py-5">
+        <h1 class="font-weight-bold">Articles</h1>
+        <hr>
+        <br>
+    </div>
+
+    {% endblock %

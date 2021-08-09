@@ -1,0 +1,8 @@
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>This is a normal paragraph.</p>
+    <p style="color:blue; font-size:25px">This is a stylized paragraph.</p>
+  </body>
+</html>

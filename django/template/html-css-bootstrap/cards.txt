@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+	<img src="https://d2gdtie5ivbdow.cloudfront.net/work.jpg" class="card-img-top" alt="work">
+	<div class="card-body">
+		<h5 class="card-title">Services</h5>
+		<p class="card-text">This card can be used to display one of the multiple services your website or company provides. Add multiple cards in their own columns to create a dynamic set of cards.</p>
+		<a href="" class="btn btn-primary">Learn more</a>
+	</div>
+</div>

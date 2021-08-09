@@ -1,0 +1,5 @@
+
+article_slug = models.SlugField()
+
+
+article_slug as a SlugField.  A SlugField is similar to a CharField except only letters, numbers, underscores and hyphens are allowed since they are used in URLs.

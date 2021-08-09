@@ -1,0 +1,8 @@
+
+
+env > mysite > main > templates > main > includes > navbar.html
+
+
+
+
+Add the blog slug to the href attribute of the blog anchor element in the navbar and save the file. Refresh the browser displaying your project and click on the blog navigation link. You will be directed to the blog page displaying all of the models we added. Now try and click on one. Nothing will happen; that's because we never added the link to the articles or created an article.html to display the content

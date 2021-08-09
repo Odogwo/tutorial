@@ -1,0 +1,6 @@
+Let's set up the basic structure of the document. Extend the header.html template and add the block content tags.
+
+
+ Add a division element with the class attributes container py-5. Nest a heading one with the class attribute font-weight-bold within it. Write in "Articles" as the heading text.
+
+  Then add a thematic break and a regular break before the closing tag of the division element. Save the file.

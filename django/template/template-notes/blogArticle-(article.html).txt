@@ -1,0 +1,4 @@
+
+Create one container for the title and the publication date and another container with the content. As you can see, we do not need a for loop to render an article because we only pass one article as context instead of multiple articles as a queryset. As always, make sure to save the file before moving on.
+
+Reload the browser page that is displaying blog.html. Click on one of the articles and you will be brought to an article page.  The page is not very interesting so let's up the appeal with a cover image

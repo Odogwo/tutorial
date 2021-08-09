@@ -1,0 +1,2 @@
+
+add tinymce to the installed apps list and copy and paste TINYMCE_DEFAULT_CONFIG settings below the installed apps. The default settings include a spellchecker and the ability to change the font size and style from the editor.

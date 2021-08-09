@@ -1,0 +1,61 @@
+check djangoRepo
+
+https://www.ordinarycoders.com/creating-a-blog
+
+
+steps
+	basic configuration
+		ADVICE--continue from movies
+
+	Installtions
+		install tinymce
+
+	seetings
+		configure tinymce
+
+	Project-urls
+		Add tinymce path to project > urls.py
+
+	models.py
+		create article models
+		add fields
+
+	MIGRATE MODEL TO DATABASE
+		makemigrations-migrate
+
+	Admin.py
+		add article model to admin.py
+
+	Admin site
+		login add an article 
+		add example articles data  
+
+
+	template/blog/
+		blog.html|blog function|loop|model|nav|links|pagination 
+
+
+	views.py
+		blog function
+
+
+	views.py
+		add blog function
+
+	main/includes/navbar.html
+		navbar
+
+	templates/main/article.html
+		article.html
+	
+
+	main/urls.py
+		urls.py
+
+
+	views.py
+		add article function
+
+
+	templates/main/article.html
+		article.html|coverimage|style
