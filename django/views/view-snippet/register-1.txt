@@ -1,0 +1,9 @@
+...
+from .forms import NewUserForm #import NewUserForm from forms.py
+
+# Create your views here.
+...
+
+def register(request):         
+	form = NewUserForm
+	return render (request=request, template_name="main/register.html", context={"form":form})

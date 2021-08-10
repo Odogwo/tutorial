@@ -1,0 +1,2 @@
+
+After the navbar-nav unordered list, add an anchor element with an href attribute that equals /register. Remember, the href attribute links to our urls.py file, which will then link to our register function in views.py.

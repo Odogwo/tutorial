@@ -1,0 +1,3 @@
+Add three Django imports to the top of the page.  The first imports forms from Django while the others import a UserCreationForm and the User model from Django's built-in authentication forms and models.  The NewUserForm takes in Django's pre-built registration form as a parameter since it extends its functionality.  Then the email field is declared.  Next, since the form is based on the User model, the model is specified under class Meta: along with the all of the user fields we would like included in our form.
+
+Finally we write a short function that overwrites the default save function to include the email field we added.  Don't worry if this part is confusing, we just added an email field to our registration form.

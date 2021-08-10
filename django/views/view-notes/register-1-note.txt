@@ -1,0 +1,2 @@
+
+Let's add the register function to the views.py. First import NewUserForm from .forms at the top of the file.  This is how we pass the form we created from forms.py to views.py. Next we need to pass the form to the register.html template as context. Add a new register function and declare a variable equal to the form we imported. Then return a render of the register.html template and pass the form as context

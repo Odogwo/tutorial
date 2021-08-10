@@ -1,0 +1,5 @@
+Create register.html in the templates > main folder.  Just like before, extend the header.html file so we can have access to the main HTML structural elements and Bootstrap CDN in register.html. Add the extends, block content, and endblock tags in their correct positions. We'll fill in the rest of the HTML soon.
+
+
+
+Create a division with container as a class attribute. Next, nest a Register header using the heading three element.  Code a form element with a method="POST" attribute for submission purposes. Next add the {% csrf_token %} to prevent form submission forgery. Since we have passed the NewUserForm as form in the views.py function for this page, we can include the form with DTL by using double brackets: {{form}}. Finally, the form will contain an HTML button element to submit the form. After the closing form tag and a few breaks, we'll include a link to a login page that we have not yet created but will add later.

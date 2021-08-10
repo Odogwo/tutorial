@@ -1,0 +1,2 @@
+
+Add a register path that connects to a register function in views.py.
