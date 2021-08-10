@@ -1,0 +1,5 @@
+Go to the products.html file and replace {% for p in products %} with {% for p in page_obj %}. Then add a new comment called Pagination and the above code after it. Save the file.
+
+Reload the products page in the browser and it should look exactly the same but with the text Page 1 of 1 at the bottom. Because we set the number of products to 18, "next" and a "previous" links will not appear until we pass 18 products.
+
+If you want to see the paginator in action, go back to the views.py file and set the variable paginator to equal  Paginator(products, 2). Refresh the page and there with now only be 2 products and a next/last link at the bottom of the page. Click either of the links and the pagination will take you to the next page of products. Change the paginator back to 18 when you are done.

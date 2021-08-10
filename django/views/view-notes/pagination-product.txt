@@ -1,0 +1,4 @@
+
+Import the Paginator object at the top of the page then add three new variables to the products function.  Assign the Paginator object to a paginator variable.  The object will have the products queryset and the number of products per page, 18, as arguments.  Next create a page_number variable that looks at the request to get the current page number.  Finally, combine all this data into one variable, page_obj.  This is the only variable we need to pass as context.
+
+ 
