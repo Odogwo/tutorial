@@ -1,3 +1,8 @@
+
+field is represented by an instance of a Field class – e.g., CharField for character fields
+
+
+
 movie_title = models.CharField(max_length=150)
 
 

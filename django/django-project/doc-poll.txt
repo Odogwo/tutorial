@@ -1,0 +1,16 @@
+
+views
+app/urls
+mysite/urls
+migrate 
+modesls
+installed apps
+migartions
+sql migrations
+migrate
+Shell
+model add _srtr_
+model add method
+shell
+superuser
+admin
