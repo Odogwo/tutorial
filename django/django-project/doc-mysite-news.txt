@@ -1,0 +1,18 @@
+
+
+webproject/env/docmysite
+
+model
+migartions
+register model in admin
+createsuperuser
+urls
+views
+static/images
+news/templates/news/base.html
+news/templates/news/year_archive.HTML
+design logo: https://www.shutterstock.com/search/free+logo
+
+PROBLEM
+
+

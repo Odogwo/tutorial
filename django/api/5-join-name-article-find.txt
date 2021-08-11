@@ -1,0 +1,10 @@
+# The API follows relationships as far as you need, performing efficient
+
+
+# JOINs for you behind the scenes.
+
+# This finds all articles by a reporter whose name starts with "John".
+
+
+>>> Article.objects.filter(reporter__full_name__startswith='John')
+<QuerySet [<Article: Django is cool>]>

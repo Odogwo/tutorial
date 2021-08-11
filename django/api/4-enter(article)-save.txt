@@ -1,0 +1,9 @@
+
+
+# Import the models we created from our "news" app
+>>> from news.models import Article, Reporter
+
+# Create an article.
+>>> from datetime import date
+>>> a = Article(pub_date=date.today(), headline='Django is cool',
+...     content='Yeah.', reporter=r)

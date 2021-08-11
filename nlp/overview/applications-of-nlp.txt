@@ -1,0 +1,10 @@
+
+Some Exciting Applications of Natural Language Processing!
+Natural Language Processing (NLP) today powers many key real-life industry applications, such as: 
+
+Language Translation
+Dialog Systems / Chatbots
+Sentiment Analysis
+Text Summarizers
+Speech Recognition
+Autocorrec

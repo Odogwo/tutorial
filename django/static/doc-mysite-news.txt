@@ -1,0 +1,1 @@
+Store your static files in a folder called static in your app. For example my_app/static/my_app/example.jpg.

@@ -1,0 +1,18 @@
+
+
+
+>>> from news.models import Article, Reporter
+
+# Create a new Reporter.
+>>> r = Reporter(full_name='John Smith')
+
+
+
+# Save the object into the database. You have to call save() explicitly.
+>>> r.save()
+
+
+# Now it has an ID.
+>>> r.id
+1
+

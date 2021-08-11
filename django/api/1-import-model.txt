@@ -1,0 +1,4 @@
+
+
+# Import the models we created from our "news" app
+>>> from news.models import Article, Reporter

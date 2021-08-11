@@ -1,0 +1,2 @@
+Django at a glance
+	https://docs.djangoproject.com/en/3.2/intro/overview/

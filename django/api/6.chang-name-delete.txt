@@ -1,0 +1,8 @@
+# Change an object by altering its attributes and calling save().
+
+
+>>> r.full_name = 'Billy Goat'
+>>> r.save()
+
+# Delete an object with delete().
+>>> r.delete()
