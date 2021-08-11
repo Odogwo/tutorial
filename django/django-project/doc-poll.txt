@@ -14,3 +14,10 @@ model add method
 shell
 superuser
 admin
+PART 3
+more views
+polls/urls
+views
+index.html
+detail-404 eror
+detail.html
