@@ -1,0 +1,15 @@
+
+Generative Adversarial Networks, or GANs for short, are an approach to generative modeling using deep learning methods, such as convolutional neural networks.
+
+GANs are an exciting and rapidly changing field, delivering on the promise of generative models in their ability to generate realistic examples across a range of problem domains, most notably in image-to-image translation tasks.
+
+Here’s how to get started with deep learning for Generative Adversarial Networks:
+
+Step 1: Discover the promise of GANs for generative modeling.
+18 Impressive Applications of Generative Adversarial Networks
+Step 2: Discover the GAN architecture and different GAN models.
+A Gentle Introduction to Generative Adversarial Networks
+A Tour of Generative Adversarial Network Models
+Step 3: Discover how to develop GAN models in Python with Keras.
+How to Get Started With Generative Adversarial Networks (7-Day Mini-Course)
+Generative Adversarial Networks with Python (my book)

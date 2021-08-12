@@ -1,0 +1,4 @@
+
+
+Mediator Topology
+The central mediator plays an important role in mediator topology. It is generally used when it is required to orchestrate various steps with an event through a central mediator. It is helpful for events that have multiple events and needs some level of orchestration to process the event

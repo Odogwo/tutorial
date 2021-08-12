@@ -1,0 +1,19 @@
+
+
+R Machine Learning (caret)
+R is a platform for statistical computing and is the most popular platform among professional data scientists.
+
+It’s popular because of the large number of techniques available, and because of excellent interfaces to these methods such as the powerful caret package.
+
+Here’s how to get started with R machine learning:
+
+Step 1: Discover the R platform and why it is so popular.
+What is R
+Use R For Machine Learning
+Super Fast Crash Course in R
+Step 2: Discover machine learning algorithms in R.
+How To Get Started With Machine Learning Algorithms in R
+Step 3: Discover how to work through problems using machine learning in R.
+Your First Machine Learning Project in R Step-By-Step
+R Machine Learning Mini-Course
+Machine Learning Mastery With R (my book)

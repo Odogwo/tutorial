@@ -1,0 +1,18 @@
+Understand Machine Learning Algorithms
+Machine learning is about machine learning algorithms.
+
+You need to know what algorithms are available for a given problem, how they work, and how to get the most out of them.
+
+Here’s how to get started with machine learning algorithms:
+
+Step 1: Discover the different types of machine learning algorithms.
+A Tour of Machine Learning Algorithms
+Step 2: Discover the foundations of machine learning algorithms.
+How Machine Learning Algorithms Work
+Parametric and Nonparametric Algorithms
+Supervised and Unsupervised Algorithms
+The Bias-Variance Trade-Off
+Overfitting and Underfitting With Algorithms
+Step 3: Discover how top machine learning algorithms work.
+Machine Learning Algorithms Mini-Course
+Master Machine Learning Algorithms (my book)

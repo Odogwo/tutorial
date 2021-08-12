@@ -1,0 +1,16 @@
+
+XGBoost in Python (Stochastic Gradient Boosting)
+XGBoost is a highly optimized implementation of gradient boosted decision trees.
+
+It is popular because it is being used by some of the best data scientists in the world to win machine learning competitions.
+
+Here’s how to get started with XGBoost:
+
+Step 1: Discover the Gradient Boosting Algorithm.
+A Gentle Introduction to the Gradient Boosting Algorithm for Machine Learning
+Step 2: Discover XGBoost.
+A Gentle Introduction to XGBoost for Applied Machine Learning
+Step 3: Discover how to get good at delivering results with XGBoost.
+How to Develop Your First XGBoost Model in Python with scikit-learn
+XGBoost With Python Mini-Course
+XGBoost With Python (my book)

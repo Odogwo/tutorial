@@ -1,0 +1,15 @@
+
+Probability for Machine Learning
+Probability is the mathematics of quantifying and harnessing uncertainty. It is the bedrock of many fields of mathematics (like statistics) and is critical for applied machine learning.
+
+Below is the 3 step process that you can use to get up-to-speed with probability for machine learning, fast.
+
+Step 1: Discover what Probability is.
+Basics of Mathematical Notation for Machine Learning
+What Is Probability?
+Step 2: Discover why Probability is so important for machine learning.
+5 Reasons to Learn Probability for Machine Learning
+A Gentle Introduction to Uncertainty in Machine Learning
+Step 3: Dive into Probability topics.
+Probability for Machine Learning Mini-Course
+Probability for Machine Learning (my book)

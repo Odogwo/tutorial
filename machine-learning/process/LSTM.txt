@@ -1,0 +1,17 @@
+
+
+Long Short-Term Memory (LSTM) Recurrent Neural Networks are designed for sequence prediction problems and are a state-of-the-art deep learning technique for challenging prediction problems.
+
+Here’s how to get started with LSTMs in Python:
+
+Step 1: Discover the promise of LSTMs.
+The Promise of Recurrent Neural Networks for Time Series Forecasting
+Step 2: Discover where LSTMs are useful.
+Making Predictions with Sequences
+A Gentle Introduction to Long Short-Term Memory Networks by the Experts
+Introduction to Models for Sequence Prediction
+Step 3: Discover how to use LSTMs on your project.
+The 5 Step Life-Cycle for Long Short-Term Memory Models in Keras
+Long Short-Term Memory Networks (Mini-Course)
+Long Short-Term Memory Networks With Python (my book)
+

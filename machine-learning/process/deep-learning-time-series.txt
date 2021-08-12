@@ -1,0 +1,18 @@
+
+
+Deep learning neural networks are able to automatically learn arbitrary complex mappings from inputs to outputs and support multiple inputs and outputs.
+
+Methods such as MLPs, CNNs, and LSTMs offer a lot of promise for time series forecasting.
+
+Here’s how to get started with deep learning for time series forecasting:
+
+Step 1: Discover the promise (and limitations) of deep learning for time series.
+The Promise of Recurrent Neural Networks for Time Series Forecasting
+On the Suitability of Long Short-Term Memory Networks for Time Series Forecasting
+Results From Comparing Classical and Machine Learning Methods for Time Series Forecasting
+Step 2: Discover how to develop robust baseline and defensible forecasting models.
+Taxonomy of Time Series Forecasting Problems
+How to Develop a Skillful Machine Learning Time Series Forecasting Model
+Step 3: Discover how to build deep learning models for time series forecasting.
+How to Get Started with Deep Learning for Time Series Forecasting (7-Day Mini-Course)
+Deep Learning for Time Series Forecasting (my book)

@@ -1,0 +1,18 @@
+
+
+Working with image data is hard because of the gulf between raw pixels and the meaning in the images.
+
+Computer vision is not solved, but to get state-of-the-art results on challenging computer vision tasks like object detection and face recognition, you need deep learning methods.
+
+Here’s how to get started with deep learning for computer vision:
+
+Step 1: Discover what deep learning for Computer Vision is all about.
+What is Computer Vision?
+What is the Promise of Deep Learning for Computer Vision?
+Step 2: Discover standard tasks and datasets for Computer Vision.
+9 Applications of Deep Learning for Computer Vision
+How to Load and Visualize Standard Computer Vision Datasets With Keras
+How to Develop and Demonstrate Competence With Deep Learning for Computer Vision
+Step 3: Discover how to work through problems and deliver results.
+How to Get Started With Deep Learning for Computer Vision (7-Day Mini-Course)
+Deep Learning for Computer Vision (my book)

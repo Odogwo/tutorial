@@ -1,0 +1,15 @@
+
+Imbalanced classification refers to classification tasks where there are many more examples for one class than another class.
+
+These types of problems often require the use of specialized performance metrics and learning algorithms as the standard metrics and methods are unreliable or fail completely.
+
+Here’s how you can get started with Imbalanced Classification:
+
+Step 1: Discover the challenge of imbalanced classification
+A Gentle Introduction to Imbalanced Classification
+Step 2: Discover the intuition for skewed class distributions.
+Develop an Intuition for Severely Skewed Class Distributions
+Step 3: Discover how to solve imbalanced classification problems.
+Step-By-Step Framework for Imbalanced Classification Projects
+Imbalanced Classification With Python (7-Day Mini-Course)
+Imbalanced Classification with Python (my book)

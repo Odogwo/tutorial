@@ -1,0 +1,14 @@
+
+
+Predictive performance is the most important concern on many classification and regression problems. Ensemble learning algorithms combine the predictions from multiple models and are designed to perform better than any contributing ensemble member.
+
+Here’s how to get started with getting better ensemble learning performance:
+
+Step 1: Discover ensemble learning.
+A Gentle Introduction to Ensemble Learning
+Why Use Ensemble Learning
+Step 2: Discover ensemble learning algorithms.
+A Gentle Introduction to Ensemble Learning Algorithms
+Step 3: Discover techniques that you can use to improve performance.
+Ensemble Machine Learning With Python (7-Day Mini-Course)
+Ensemble Learning Algorithms With Python (my book)

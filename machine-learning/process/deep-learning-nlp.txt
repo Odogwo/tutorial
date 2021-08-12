@@ -1,0 +1,18 @@
+
+
+Working with text data is hard because of the messy nature of natural language.
+
+Text is not “solved” but to get state-of-the-art results on challenging NLP problems, you need to adopt deep learning methods
+
+Here’s how to get started with deep learning for natural language processing:
+
+Step 1: Discover what deep learning for NLP is all about.
+What is Natural Language Processing?
+What is Deep Learning?
+Promise of Deep Learning for Natural Language Processing
+Step 2: Discover standard datasets for NLP.
+7 Applications of Deep Learning for Natural Language Processing
+Datasets for Natural Language Processing
+Step 3: Discover how to work through problems and deliver results.
+Crash-Course in Deep Learning for Natural Language Processing
+Deep Learning for Natural Language Processing (my book)

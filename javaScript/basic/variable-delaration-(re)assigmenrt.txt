@@ -1,0 +1,13 @@
+var myName;
+
+myName 7;
+
+var myNum;
+
+myNum= 7;
+
+
+inialised a variable in same line
+	var myNum = 10;
+
+

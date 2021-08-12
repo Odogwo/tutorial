@@ -1,0 +1,19 @@
+
+
+Deep learning is a fascinating and powerful field.
+
+State-of-the-art results are coming from the field of deep learning and it is a sub-field of machine learning that cannot be ignored.
+
+Here’s how to get started with deep learning:
+
+Step 1: Discover what deep learning is all about.
+What is Deep Learning?
+8 Inspirational Applications of Deep Learning
+Step 2: Discover the best tools and libraries.
+Introduction to the Python Deep Learning Library Theano
+Introduction to the Python Deep Learning Library TensorFlow
+Introduction to Python Deep Learning with Keras
+Step 3: Discover how to work through problems and deliver results.
+Develop Your First Neural Network in Python With Keras Step-By-Step
+Applied Deep Learning in Python Mini-Course
+Deep Learning With Python (my book)

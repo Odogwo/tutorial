@@ -1,0 +1,26 @@
+
+How Do I Get Started?
+The most common question I’m asked is: “how do I get started?”
+
+My best advice for getting started in machine learning is broken down into a 5-step process:
+
+Step 1: Adjust Mindset. Believe you can practice and apply machine learning.
+What is Holding you Back From Your Machine Learning Goals?
+Why Machine Learning Does Not Have to Be So Hard
+How to Think About Machine Learning
+Find Your Machine Learning Tribe
+Step 2: Pick a Process. Use a systemic process to work through problems.
+Applied Machine Learning Process
+Step 3: Pick a Tool. Select a tool for your level and map it onto your process.
+Beginners: Weka Workbench.
+Intermediate: Python Ecosystem.
+Advanced: R Platform.
+Best Programming Language for Machine Learning
+Step 4: Practice on Datasets. Select datasets to work on and practice the process.
+Practice Machine Learning with Small In-Memory Datasets
+Tour of Real-World Machine Learning Problems
+Work on Machine Learning Problems That Matter To You
+Step 5: Build a Portfolio. Gather results and demonstrate your skills.
+Build a Machine Learning Portfolio
+Get Paid To Apply Machine Learning
+Machine Learning For Money

@@ -1,0 +1,18 @@
+
+Python Machine Learning (scikit-learn)
+Python is one of the fastest growing platforms for applied machine learning.
+
+You can use the same tools like pandas and scikit-learn in the development and operational deployment of your model.
+
+Below are the steps that you can use to get started with Python machine learning:
+
+Step 1: Discover Python for machine learning
+A Gentle Introduction to Scikit-Learn: A Python Machine Learning Library
+Step 2: Discover the ecosystem for Python machine learning.
+Crash Course in Python for Machine Learning Developers
+Python Ecosystem for Machine Learning
+Python is the Growing Platform for Applied Machine Learning
+Step 3: Discover how to work through problems using machine learning in Python.
+Your First Machine Learning Project in Python Step-By-Step
+Python Machine Learning Mini-Course
+Machine Learning Mastery With Python (my book)

@@ -1,0 +1,15 @@
+
+Introduction to Time Series Forecasting (Python)
+Time series forecasting is an important topic in business applications.
+
+Many datasets contain a time component, but the topic of time series is rarely covered in much depth from a machine learning perspective.
+
+Here’s how to get started with Time Series Forecasting:
+
+Step 1: Discover Time Series Forecasting.
+What Is Time Series Forecasting?
+Step 2: Discover Time Series as Supervised Learning.
+Time Series Forecasting as Supervised Learning
+Step 3: Discover how to get good at delivering results with Time Series Forecasting.
+Time Series Forecasting With Python Mini-Course
+Time Series Forecasting With Python (my book)

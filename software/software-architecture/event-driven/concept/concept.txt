@@ -1,0 +1,8 @@
+
+
+Event-driven architecture (EDA) is a software architecture paradigm promoting the production, detection, consumption of, and reaction to events
+
+
+An event can be defined as "a significant change in state".[1] For example, when a consumer purchases a car, the car's state changes from "for sale" to "sold". A car dealer's system architecture may treat this state change as an event whose occurrence can be made known to other applications within the architecture. 
+
+

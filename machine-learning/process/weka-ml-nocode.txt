@@ -1,0 +1,17 @@
+
+Weka Machine Learning (no code)
+Weka is a platform that you can use to get started in applied machine learning.
+
+It has a graphical user interface meaning that no programming is required and it offers a suite of state of the art algorithms.
+
+Here’s how you can get started with Weka:
+
+Step 1: Discover the features of the Weka platform.
+What is the Weka Machine Learning Workbench
+Step 2: Discover how to get around the Weka platform.
+How to Download and Install the Weka Machine Learning Workbench
+A Tour of the Weka Machine Learning Workbench
+Step 3: Discover how to deliver results with Weka.
+How to Run Your First Classifier in Weka
+Applied Machine Learning With Weka Mini-Course
+Machine Learning Mastery With Weka (my book)

@@ -1,0 +1,18 @@
+
+
+Although it is easy to define and fit a deep learning neural network model, it can be challenging to get good performance on a specific predictive modeling problem.
+
+There are standard techniques that you can use to improve the learning, reduce overfitting, and make better predictions with your deep learning model.
+
+Here’s how to get started with getting better deep learning performance:
+
+Step 1: Discover the challenge of deep learning.
+Why Training a Neural Network Is Hard
+The Challenge of Training Deep Learning Neural Network Models
+Step 2: Discover frameworks for diagnosing and improving model performance.
+How To Improve Deep Learning Performance
+Framework for Better Deep Learning
+Introduction to Learning Curves for Diagnosing Model Performance
+Step 3: Discover techniques that you can use to improve performance.
+How to Get Better Deep Learning Results (7-Day Mini-Course)
+Better Deep Learning (my book)

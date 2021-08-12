@@ -1,0 +1,16 @@
+
+Code Algorithm from Scratch (Python)
+You can learn a lot about machine learning algorithms by coding them from scratch.
+
+Learning via coding is the preferred learning style for many developers and engineers.
+
+Here’s how to get started with machine learning by coding everything from scratch.
+
+Step 1: Discover the benefits of coding algorithms from scratch.
+Benefits of Implementing Machine Learning Algorithms From Scratch
+Understand Machine Learning Algorithms By Implementing Them From Scratch
+Step 2: Discover that coding algorithms from scratch is a learning tool only.
+Stop Coding Machine Learning Algorithms From Scratch
+Don’t Start with Open-Source Code When Implementing Machine Learning Algorithms
+Step 3: Discover how to code machine learning algorithms from scratch in Python.
+Machine Learning Algorithms From Scratch (my book)

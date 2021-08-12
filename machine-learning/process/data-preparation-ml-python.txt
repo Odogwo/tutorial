@@ -1,0 +1,19 @@
+
+
+Data Preparation for Machine Learning (Python)
+The performance of your predictive model is only as good as the data that you use to train it.
+
+As such data preparation may the most important parts of your applied machine learning project.
+
+Here’s how to get started with Data Preparation for machine learning:
+
+Step 1: Discover the importance of data preparation.
+What Is Data Preparation in a Machine Learning Project
+Why Data Preparation Is So Important in Machine Learning
+Step 2: Discover data preparation techniques.
+Tour of Data Preparation Techniques for Machine Learning
+Framework for Data Preparation Techniques in Machine Learning
+Step 3: Discover how to get good at delivering results with data preparation.
+How to Choose Data Preparation Methods for Machine Learning
+Data Preparation for Machine Learning (7-Day Mini-Course)
+Data Preparation for Machine Learning (my book)

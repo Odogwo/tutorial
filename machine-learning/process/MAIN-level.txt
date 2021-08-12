@@ -1,0 +1,32 @@
+Foundations
+How Do I Get Started?
+Step-by-Step Process
+Probability
+Statistical Methods
+Linear Algebra
+
+
+Beginner
+Understand ML Algorithms
+ML + Weka (no code)
+ML + Python (scikit-learn)
+ML + R (caret)
+Time Series Forecasting
+Data Preparation
+
+
+Intermediate
+Code ML Algorithms
+XGBoost Algorithm
+Imbalanced Classification
+Deep Learning (Keras)
+Better Deep Learning
+Ensemble Learning
+
+
+Advanced
+Long Short-Term Memory
+Natural Language (Text)
+Computer Vision
+CNN/LSTM + Time Series
+GANs
