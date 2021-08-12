@@ -1,0 +1,2 @@
+
+In the practice of Continuous Delivery, code changes are also continuously deployed, although the deployments are triggered manually

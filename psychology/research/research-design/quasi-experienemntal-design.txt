@@ -1,0 +1,15 @@
+
+Quasi-Experimental Designs
+
+
+as-is (quasi-experimental design)
+
+
+
+What if you want to study the effects of marriage on a variable? For example, does marriage make people happier? Can you randomly assign some people to get married and others to remain single? Of course not. So how can you study these important variables? You can use a quasi-experimental design.
+
+Scrabble tiles and wedding rings spell out the word "Love".
+What is a reasonable way to study the effects of marriage on happiness? [Image: Nina Matthews Photography, https://goo.gl/IcmLqg, CC BY-NC-SA, https://goo.gl/HSisdg]
+A quasi-experimental design is similar to experimental research, except that random assignment to conditions is not used. Instead, we rely on existing group memberships (e.g., married vs. single). We treat these as the independent variables, even though we don’t assign people to the conditions and don’t manipulate the variables. As a result, with quasi-experimental designs causal inference is more difficult. For example, married people might differ on a variety of characteristics from unmarried people. If we find that married participants are happier than single participants, it will be hard to say that marriage causes happiness, because the people who got married might have already been happier than the people who have remained single.
+
+Because experimental and quasi-experimental designs can seem pretty similar, let’s take another example to distinguish them. Imagine you want to know who is a better professor: Dr. Smith or Dr. Khan. To judge their ability, you’re going to look at their students’ final grades. Here, the independent variable is the professor (Dr. Smith vs. Dr. Khan) and the dependent variable is the students’ grades. In an experimental design, you would randomly assign students to one of the two professors and then compare the students’ final grades. However, in real life, researchers can’t randomly force students to take one professor over the other; instead, the researchers would just have to use the preexisting classes and study them as-is (quasi-experimental design). Again, the key difference is random assignment to the conditions of the independent variable. Although the quasi-experimental design (where the students choose which professor they want) may seem random, it’s most likely not. For example, maybe students heard Dr. Smith sets low expectations, so slackers prefer this class, whereas Dr. Khan sets higher expectations, so smarter students prefer that one. This now introduces a confounding variable (student intelligence) that will almost certainly have an effect on students’ final grades, regardless of how skilled the professor is. So, even though a quasi-experimental design is similar to an experimental design (i.e., both have independent and dependent variables), because there’s no random assignment, you can’t reasonably draw the same conclusions that you would with an experimental design.

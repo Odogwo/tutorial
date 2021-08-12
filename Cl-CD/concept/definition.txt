@@ -1,0 +1,12 @@
+
+CICD — Concepts in Continuous Integration and Deployment
+
+“CI/CD” stands for the combined practices of Continuous Integration (CI) and Continuous Delivery (CD)
+
+
+Modern software moves fast and demands more from developers than ever. Tools and concepts around CICD help developers deliver value faster and more transparently
+
+
+CI, Continuous Integration, CICD, or Continuous delivery. It’s a concept that goes by many names but covers the same basic ideas
+
+CI/CD is a way of developing software in which you’re able to release updates at any time in a sustainable way. When changing code is routine, development cycles are more frequent, meaningful and faster

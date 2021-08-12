@@ -1,0 +1,8 @@
+
+CI : Continuous Integration
+
+Continuous Integration is the process of frequently building and testing new code changes.
+
+The CI part of CICD can be summarized with: you want all parts of what goes into making your application go to the same place and run through the same processes with results published to an easy to access place.
+
+

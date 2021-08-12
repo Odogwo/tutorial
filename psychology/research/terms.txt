@@ -1,0 +1,35 @@
+
+
+Vocabulary
+	Confounds
+	Factors that undermine the ability to draw causal inferences from an experiment.
+
+	Correlation
+	Measures the association between two variables, or how they go together.
+
+	Dependent variable
+	The variable the researcher measures but does not manipulate in an experiment.
+
+	Experimenter expectations
+	When the experimenter’s expectations influence the outcome of a study.
+
+	Independent variable
+	The variable the researcher manipulates and controls in an experiment.
+
+	Longitudinal study
+	A study that follows the same group of individuals over time.
+
+	Operational definitions
+	How researchers specifically measure a concept.
+
+	Participant demand
+	When participants behave in a way that they think the experimenter wants them to behave.
+
+	Placebo effect
+	When receiving special treatment or something new affects human behavior.
+
+	Quasi-experimental design
+	An experiment that does not require random assignment to conditions.
+
+	Random assignment
+	Assigning participants to receive different conditions of an experiment by chance.

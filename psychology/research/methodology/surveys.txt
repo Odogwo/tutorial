@@ -1,0 +1,7 @@
+
+
+Surveys provide researchers with some significant advantages in gathering data. They make it possible to reach large numbers of people while keeping costs to the researchers and the time commitments of participants relatively low.
+
+A survey is a way of gathering information, using old-fashioned questionnaires or the Internet. Compared to a study conducted in a psychology laboratory, surveys can reach a larger number of participants at a much lower cost. Although surveys are typically used for correlational research, this is not always the case. An experiment can be carried out using surveys as well. For example, King and Napa (1998) presented participants with different types of stimuli on paper: either a survey completed by a happy person or a survey completed by an unhappy person. They wanted to see whether happy people were judged as more likely to get into heaven compared to unhappy people. Can you figure out the independent and dependent variables in this study? Can you guess what the results were? Happy people (vs. unhappy people; the independent variable) were judged as more likely to go to heaven (the dependent variable) compared to unhappy people!
+
+Likewise, correlational research can be conducted without the use of surveys. For instance, psychologists LeeAnn Harker and Dacher Keltner (2001) examined the smile intensity of women’s college yearbook photos. Smiling in the photos was correlated with being married 10 years later!

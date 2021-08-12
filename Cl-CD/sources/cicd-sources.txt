@@ -1,0 +1,7 @@
+
+
+https://semaphoreci.com/cicd
+
+https://semaphoreci.com/blog/cicd-pipeline
+
+https://www.devopsuniversity.org/cicd-and-devops/

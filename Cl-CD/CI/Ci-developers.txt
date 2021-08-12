@@ -1,0 +1,3 @@
+
+
+Continuous integration encourages developers to integrate their code frequently to a shared code base early and each integration is verified by a build to minimize integration errors

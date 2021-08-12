@@ -1,0 +1,7 @@
+
+
+Continuous Integration and Continuous Delivery are often quoted as the pillars of successful DevOps. DevOps is a software development approach which bridges the gap between development and operations teams by automating build, test and deployment of applications. It is implemented using the CICD pipeline. Below image depicts DevOps in a nutshell.
+
+
+We can say, that, DevOps is about culture while CI/CD is mainly about the process and tools. 
+

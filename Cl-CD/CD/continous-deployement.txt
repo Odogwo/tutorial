@@ -1,0 +1,2 @@
+
+In the practice of Continuous Delivery, code changes are also continuously deployed, although the deployments are triggered manually. If the entire process of moving code from source repository to production is fully automated, the process is called Continuous Deployment.

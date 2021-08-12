@@ -1,0 +1,3 @@
+
+
+Continuous integration, delivery and deployment are practices designed to help increase the speed of development and the release of well-tested products

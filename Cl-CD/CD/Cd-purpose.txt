@@ -1,0 +1,3 @@
+
+
+Continuous delivery removes barriers on the way to deployment or release. Continuous deployment goes one step further by deploying every successful build that passes the test suite automatically.
