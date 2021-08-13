@@ -1,0 +1,13 @@
+
+
+If you are using other databases, such as PostgreSQL, MySQL, and so on, changes will have to be made in the preceding database settings as shown here:
+
+DATABASES = {\
+             'default': {\
+                         'ENGINE': 'django.db\
+                                    .backends.postgresql',\
+                         'NAME': 'bookr',\
+                         'USER': <username>,\
+                         'PASSWORD': <password>,\
+                         'HOST': <host-IP-address>,\
+                         'PORT': '5432',}}

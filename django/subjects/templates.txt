@@ -1,0 +1,21 @@
+
+Templates
+A template is a HyperText Markup Language (HTML) file (usually – any text file can be a template) that contains special placeholders that are replaced by variables your application provides. For example, your application could render a list of items in either a gallery layout or a table layout. Your view would fetch the same models for either one but would be able to render a different HTML file with the same information to present the data differently. Django emphasizes safety, so it will take care of automatically escaping variables for you. For example, the < and > symbols (among others) are special characters in HTML. If you try to use them in a variable, then Django automatically encodes them so they render correctly in a browser.
+
+MVT in Practice
+We'll now look at some examples to illustrate how MVT works in practice. In the examples, we have a Book model that stores information about different books, and a Review model that stores information about different reviews of the books.
+
+In the first example, we want to be able to edit the information about a book or review. Take the first scenario, editing a book's details. We would have a view to fetch the Book data from the database and provide the Book model. Then, we would pass context information containing the Book object (and other data) to a template that would show a form to capture the new information. The second scenario (editing a review) is similar: fetch a Review model from the database, then pass the Review object and other data to a template to display an edit form. These scenarios might be so similar that we can reuse the same template for both
+
+You can see here that we use two models, two views, and one template. Each view fetches a single instance of its associated model, but they can both use the same template, which is a generic HTML page to display a form. The views can provide extra context data to slightly alter the display of the template for each model type. Also illustrated in the diagram are the parts of the code that are written in Python and those that are written in HTML.
+
+In the second example, we want to be able to show the user a list of the books or reviews that are stored in the application. Furthermore, we want to allow the user to search for books and get a list of all that match their criteria. We will use the same two models as the previous example (Book and Review), but we will create new views and templates. Since there are three scenarios, we'll use three views this time: the first fetches all books, the second fetches all reviews, and the last searches for books based on some search criteria. Once again, if we write a template well, we might be able to just use a single HTML template again. Refer to Figure 1.4:
+
+
+The Book and Review models remain unchanged from the previous example. The three views will fetch many (zero or more) books or reviews. Then, each view can use the same template, which is a generic HTML file that iterates over a list of objects that it is given and renders them. Once again, the views can send extra data in the context to alter how the template behaves, but the majority of the template will be as generic as possible.
+
+In Django, a model does not always need to be used to render an HTML template. A view can generate the context data itself and render a template with it, without requiring any model data. See Figure 1.5 for a view sending data straight to a template:
+
+
+n this example, there is a welcome view to welcome a user to the site. It doesn't need any information from the database, so it can just generate the context data itself. The context data depends on the type of information you want to display; for example, you could pass the user information to greet them by name if they are logged in. It is also possible for a view to render a template without any context data. This can be useful if you have static information in an HTML file that you want to serve.
+

@@ -1,0 +1,27 @@
+
+URL Mapping Detail
+We briefly mentioned URL maps earlier in the Processing a Request section. Django does not automatically know which view function should be executed when it receives a request for a particular URL. The role of a URL mapping to build this link between a URL and a view. For example, in Bookr, you might want to map the URL /books/ to a books_list view that you have created.
+
+The URL-to-view mapping is defined in the file that Django automatically created called urls.py, inside the bookr package directory (although a different file can be set in settings.py; more on that later).
+
+This file contains a variable, urlpatterns, which is a list of paths that Django evaluates in turn until it finds a match for the URL being requested. The match will either resolve to a view function, or to another urls.py file also containing a urlpatterns variable, which will be resolved in the same manner. URL files can be chained in this manner for as long as you want. In this way, you can split URL maps into separate files (such as one or more per app) so that they don't become too large. Once a view has been found, Django calls it with an HttpRequest instance and any parameters parsed from the URL.
+
+Rules are set by calling the path function, which takes the path of the URL as the first argument. The path can contain named parameters that will be passed to a view as function parameters. Its second argument is either a view or another file also containing urlpatterns.
+
+There is also the re_path function, which is similar to path except it takes a regular expression as the first argument for a more advanced configuration. There is much more to URL mapping; however, and it will be covered
+
+
+o illustrate these concepts, Figure 1.21 shows the default urls.py file that Django generates. You can see the urlpatterns variable, which lists all the URLs that are set up. Currently, there is only one rule set up, which maps any path starting with admin/ to the admin URL maps (the admin.site.urls module). This is not a mapping to a view; instead, it is an example of chaining URL maps together—the admin.site.urls module will define the remainder of the paths (after admin/) that map to the admin views. We will cover the Django admin site in Chapter 4, Introduction to Django Admin.
+
+We will now write a view and set up a URL map to it to see these concepts in action.
+
+
+CONNECT VIEWS AND URLS BOOKR
+
+We will now set up a URL map to the index view. This will be very simple and won't contain any parameters. Expand the bookr directory in the Project pane, then open urls.py. Django has automatically generated this file.
+For now, we'll just add a simple URL to replace the default index that Django provides.
+
+urlpatterns = [path('admin/', admin.site.urls),\
+               path('', reviews.views.index)]
+
+Make sure you don't add brackets after the index function (that is, it should be reviews.views.index and not reviews.views.index()) as we are passing a reference to a function rather than calling it

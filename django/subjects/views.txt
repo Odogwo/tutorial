@@ -1,0 +1,7 @@
+
+
+Views
+A Django view is where most of the logic for your application is defined. When a user visits your site, their web browser will send a request to retrieve data from your site (in the next section, we will go into more detail on what an HTTP request is and what information it contains). A view is a function that you write that will receive this request in the form of a Python object (specifically, a Django HttpRequest object). It is up to your view to decide how it should respond to the request and what it should send back to the user. Your view must return an HttpResponse object that encapsulates all the information being provided to the client: content, HTTP status, and other headers.
+
+The view can also optionally receive information from the URL of the request, for example, an ID number. A common design pattern of a view is to query a database via the Django ORM using an ID that is passed into your view. Then the view can render a template (more on this in a moment) by providing it with data from the model retrieved from the database. The rendered template becomes the content of HttpResponse and is returned from the view function. Django takes care of the communication of the data back to the browser.
+

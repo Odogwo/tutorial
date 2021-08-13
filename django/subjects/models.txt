@@ -1,0 +1,12 @@
+
+Models
+Django models define the data for your application and provide an abstraction layer to SQL database access through an Object Relational Mapper (ORM). An ORM lets you define your data schema (classes, fields, and their relationships) using Python code, without needing an understanding of the underlying database. This means you can define your database layer in Python code and Django will take care of generating SQL queries for you. ORMs will be discussed in detail in Chapter 2, Models and Migrations.
+
+Note
+
+SQL stands for Structured Query Language and is a way of describing a type of database that stores its data in tables, with each table having several rows. Think of each table being like an individual spreadsheet. Unlike a spreadsheet, though, relationships can be defined between the data in each table. You can interact with data by executing SQL queries (often referred to as just queries when talking about databases). Queries allow you to retrieve data (SELECT), add or change data (INSERT and UPDATE respectively), and remove data (DELETE). There are many SQL database servers to choose from, such as SQLite, PostgreSQL, MySQL, or Microsoft SQL Server. Much of the SQL syntax is similar between databases, but there can be some differences in dialect. Django's ORM takes care of these differences for you: when we start coding, we will use the SQLite database to store data on disk, but later when we deploy to a server, we will switch to PostgreSQL but won't need to make any code changes.
+
+Normally, when querying a database, the results come back as primitive Python objects, (for example, lists of strings, integers, floats, or bytes). When using the ORM, results are automatically converted into instances of the model classes you have defined. Using an ORM means that you are automatically protected from a type of vulnerability known as a SQL injection attack.
+
+If you're more familiar with databases and SQL, you always have the option of writing your own queries too.
+

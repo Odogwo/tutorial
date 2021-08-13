@@ -1,0 +1,10 @@
+This is a basic timeline of the request and response flows, so you can get an idea of what the code you'll be writing does at each stage. In terms of writing code, the first part you will write is your view. The view you create will perform some actions, such as querying the database for data. Then the view will pass this data to another function to render a template, finally returning the HttpResponse object encompassing the data you want to send back to the client.
+
+Next, Django needs to know how to map a specific URL to your view, so that it can load the correct view for the URL it receives as part of a request. You will write this URL mapping in a URL configuration Python file.
+
+When Django receives a request, it parses the URL config file, then finds the corresponding view. It calls the view, passing in an HttpRequest object representing the request. Your view will return its HttpResponse, then Django takes over again to send this data to its host web server and back out to the client that requested it:
+
+Figure 1.7: Request and response flow
+Figure 1.7: Request and response flow
+
+The request-response flow is illustrated in Figure 1.7; the sections indicated as Your Code are code that you write—the first and last steps are taken care of by Django. Django does the URL matching for you, calls your view code, then handles passing the response back to the client.

@@ -1,0 +1,46 @@
+
+
+Debugging and Dealing with Errors
+When programming, unless you're the perfect programmer who never makes mistakes, you'll probably have to deal with errors or debug your code at some point. When there is an error in your program, there are usually two ways to tell: either your code will raise an exception, or you will get an unexpected output or results when viewing the page. Exceptions you will probably see more often, as there are many accidental ways to cause them. If your code is generating unexpected output, but not raising any exceptions, you will probably want to use the PyCharm debugger to find out why.
+
+Exceptions
+If you have worked with Python or other programming languages before, you have probably come across exceptions. If not, here's a quick introduction. Exceptions are raised (or thrown in other languages) when an error occurs. The execution of the program stops at that point in the code, and the exception travels back up the function call chain until it is caught. If it is not caught, then the program will crash, sometimes with an error message describing the exception and where it occurred. There are exceptions that are raised by Python itself, and your code can raise exceptions to quickly stop execution at any point. Some common exceptions that you might see when programming Python are listed here:
+
+IndentationErrorPython will raise this if your code is not correctly indented or has mixed tabs and spaces.
+SyntaxErrorPython raises this error if your code has invalid syntax:
+>>> a === 1
+  File "<stdin>", line 1
+    a === 1
+        ^
+SyntaxError: invalid syntax
+ImportErrorThis is raised when an import fails, for example, if trying to import from a file that does not exist or trying to import a name that is not set in a file:
+>>> import missing_file
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named missing_file
+NameErrorThis is raised when trying to access a variable that has not yet been set:
+>>> a = b + 5
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'b' is not defined
+KeyErrorThis is raised when accessing a key that is not set in a dictionary (or dictionary-like object):
+>>> d = {'a': 1}
+>>> d['b']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'b'
+IndexErrorThis is raised when accessing an index outside the length of a list:
+>>> l = ['a', 'b']
+>>> l[3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+TypeErrorThis is raised when trying to perform an operation on an object that does not support it, or when using two objects of the wrong type—for example, trying to add a string to an integer:
+>>> 1 + '1'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+Django also raises its own custom exceptions, and you will be introduced to them throughout the book.
+
+When running the Django development server with DEBUG = True in your settings.py file, Django will automatically capture exceptions that occur in your code (instead of crashing). It will then generate an HTTP response showing you a stack trace and other information to help you debug the problem. When running in production, DEBUG should be set to False. Django will then return a standard internal server error page, without any sensitive information. You also have the option to display a custom error page.
+

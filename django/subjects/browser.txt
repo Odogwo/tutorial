@@ -1,0 +1,5 @@
+
+
+URL pATTERN  HTTP RESPONSE
+
+Visit http://127.0.0.1:8000 in your browser. You should notice that the page still says Hello, world! This is because we have not supplied a name parameter. You can add your name into the URL, for example, http://127.0.0.1:8000?name=Ben:

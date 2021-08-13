@@ -1,0 +1,9 @@
+
+Debugging
+When you're trying to find problems in your code, it can help to use a debugger. This is a tool that lets you go through your code line by line, rather than executing it all at once. Each time the debugger is paused on a particular line of code, you can see the values of all the current variables. This is very useful for finding out errors in your code that don't raise exceptions.
+
+For example, in Bookr, we have talked about having a view that fetches a list of books from the database and renders them in an HTML template. If you view the page in the browser, you might see only one book when you expect several. You could have the execution pause inside your view function and see what values were fetched from the database. If your view is only receiving one book from the database, you know there is a problem with your database querying somewhere. If your view is successfully fetching multiple books but only one is being rendered, then it's probably a problem with the template. Debugging helps you narrow down faults like this.
+
+PyCharm has a built-in debugger to make it easy to step through your code and see what is happening on each line. To tell the debugger where to stop the execution of the code, you need to set a breakpoint on one or more lines of code. They are named as such because the execution of the code will break (stop) at that point.
+
+For breakpoints to be activated, PyCharm needs to be set to run your project in its debugger. There is a small performance penalty but it usually is not noticeable, so you might choose to always run your code inside the debugger so that you can quickly set a breakpoint without having to stop and restart the Django dev server.

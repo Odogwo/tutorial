@@ -1,0 +1,10 @@
+
+
+Rendering Variables in Templates
+Templates aren't just static HTML. Most of the time, they will contain variables that are interpolated as part of the rendering process. These variables are passed from the view to the template using a context: a dictionary (or dictionary-like object) that contains names for all the variables a template can use. We'll take Bookr again as an example. Without variables in your template, you would need a different HTML file for each book you wanted to display. Instead, we use a variable such as book_name inside the template, and then the view provides the template with a book_name variable set to the title of the book model it has loaded. When displaying a different book, the HTML does not need to change; the view just passes a different book to it. You can see how model, view, and template are all now coming together.
+
+Unlike some other languages, such as PHP, variables must be explicitly passed to the template, and variables in the view aren't automatically available to the template. This is for security as well as to avoid accidentally polluting the template's namespace (we don't want any unexpected variables in the template).
+
+Inside a template, variables are denoted by double braces, {{ }}. While not strictly a standard, this style is quite common and used in other templating tools such as Vue.js and Mustache. Symfony (a PHP framework) also uses double braces in its Twig templating language, so you might have seen them used similarly there.
+
+To render a variable in a template, simply wrap it with braces: {{ book_name }}. Django will automatically escape HTML in output so that you can include special characters (such as < or >) in your variable without worrying about it garbling your output. If a variable is not passed to a template, Django will simply render nothing at that location, instead of throwing an exception.

@@ -1,0 +1,10 @@
+
+
+from django.http import HttpResponse
+def index(request):
+    return HttpResponse("Hello, world!")
+First, the HttpResponse class needs to be imported from django.http. This is what is used to create the response that goes back to the web browser. You can also use it to control things such as the HTTP headers or status code. For now, it will just use the default headers and 200 Success status code. Its first argument is the string content to send as the body of the response.
+
+Then, the view function returns an HttpResponse instance with the content we defined (Hello, world!):
+
+

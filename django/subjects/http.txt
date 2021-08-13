@@ -1,0 +1,76 @@
+
+Now that you have been introduced to MVT in Django, we can look at how Django processes an HTTP request and generates an HTTP response. But first, we need to explain in more detail what HTTP requests and responses are, and what information they contain.
+
+Let's say someone wants to visit your web page. They type in its URL or click a link to your site from a page they are already on. Their web browser creates an HTTP request, which is sent to the server hosting your website. Once a web server receives the HTTP request from your browser, it can interpret it and then send back a response. The response that the server sends might be simple, such as just reading an HTML or image file from disk and sending it. Or, the response might be more complex, maybe using server-side software (such as Django) to dynamically generate the content before sending it:
+
+Figure 1.6: HTTP request and HTTP response
+Figure 1.6: HTTP request and HTTP response
+
+The request is made up of four main parts: the method, path, headers, and body. Some types of requests don't have a body. If you just visit a web page, your browser will not send a body, whereas if you are submitting a form (for example, by logging into a site or performing a search), then your request will have a body containing the data you're submitting. We'll look at two example requests now to illustrate this.
+
+
+he first request will be to an example page with the URL https://www.example.com/page. When your browser visits that page, behind the scenes, this is what it's sending:
+
+GET /page HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Firefox/15.0.1
+Cookie: sessid=abc123def456
+The first line contains the method (GET) and the path (/page). It also contains the HTTP version, in this case, 1.1, although you don't have to worry about this. Many different HTTP methods can be used, depending on how you want to interact with the remote page. Some common ones are GET (retrieve the remote page), POST (send data to the remote page), PUT (create a remote page), and DELETE (delete the remote page). Note that the descriptions of the actions are somewhat simplified—the remote server can choose how it responds to different methods, and even experienced developers can disagree on the correct method to implement for a particular action. It's also important to note that even if a server supports a particular method, you will probably need the correct permissions to perform that action—you can't just use DELETE on a web page you don't like, for example.
+
+When writing a web application, the vast majority of the time, you will only deal with GET requests. When you start accepting forms, you'll also have to use POST requests. It is only when you are working with advanced features such as creating REST APIs that you will have to worry about PUT, DELETE, and other methods.
+
+Referring back to the example request again, from line 2 onward are the headers of the request. The headers contain extra metadata about the request. Each header is on its own line, with the header name and its value separated by a colon. Most are optional (except for Host—more on that soon). Header names are not case sensitive. For the sake of the example, we're only showing three common headers here. Let's look at the example headers in order:
+
+Host: As mentioned, this is the only header that is required (for HTTP 1.1 or later). It is needed for the webserver to know which website or application should respond to the request, in case there are multiple sites hosted on a single server.
+User-Agent: Your browser usually sends to the server a string identifying its version and operating system. Your server application could use this to serve different pages to different devices (for example, a mobile-specific page for smartphones).
+Cookie: You have probably seen a message when visiting a web page that lets you know that it is storing a cookie in the browser. These are small pieces of information that a website can store in your browser that can be used to identify you or save settings for when you return to the site. If you were wondering about how your browser sends these cookies back to the server, it is through this header.
+There are many other standard headers defined and it would take up too much space to list them all. They can be used to authenticate to the server (Authorization), tell the server what kind of data you can receive (Accept), or even state what language you'd like for the page (Accept-Language, although this will only work if the page creator has made the content available in the particular language you request). You can even define your own headers that only your application knows how to respond to.
+
+Now let's look at a slightly more advanced request: one that sends some information to a server, and thus (unlike the previous example) contains a body. In this example, we are logging into a web page by sending a username and password. For example, you visit https://www.example.com/login and it displays a form to enter username and password. After you click the Login button, this is the request that is sent to the server:
+
+POST /login HTTP/1.1
+Host: www.example.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 32
+username=user1&password=password1
+As you can see, this looks similar to the first example, but there are a few differences. The method is now POST, and two new headers have been introduced (you can assume your browser would still be sending the other headers that were in the previous example too):
+
+Content-Type : This tells the server the type of data that is included in the body. In the case of application/x-www-form-urlencoded, the body is a set of key-value pairs. An HTTP client could set this header to tell the server if it was sending other types of data, such as JSON or XML, for example.
+Content-Length: For the server to know how much data to read, the client must tell it how much data is being sent. The Content-Length header contains the length of the body. If you count the length of the body in this example, you'll see it's 32 characters.
+The headers are always separated from the body by a blank line. By looking at the example, you should be able to tell how the form data is encoded in the body: username has the value user1 and password the value password1.
+
+These requests were quite simple, but most requests don't get much more complicated. They might have different methods and headers but should follow the same format. Now that you've seen requests, we'll take a look at the HTTP responses that come back from the server.
+
+An HTTP response looks similar to a request and consists of three main parts: a status, headers, and a body. Like a request, though, depending on the type of response, it might not have a body. The first response example is a simple successful response:
+
+HTTP/1.1 200 OK
+Server: nginx
+Content-Length: 18132
+Content-Type: text/html
+Set-Cookie: sessid=abc123def46
+<!DOCTYPE html><html><head>…
+The first line contains the HTTP version, a numeric status code (200), and then a text description of what the code means (OK—the request was a success). We'll show some more statuses after the next example. Lines 2 to 5 contain headers, similar to a request. Some headers you have seen before; we will explain them all in this context:
+
+Server: This is similar to but the opposite of the User-Agent header: this is the server telling the client what software it is running.
+Content-Length: The client uses this value to determine how much data to read from the server to get the body.
+Content-Type: The server uses this header to indicate to the client what type of data it is sending. The client can then choose how it will display the data—an image must be displayed differently to HTML, for example.
+Set-Cookie: We saw in the first request example how a client sends a cookie to the server. This is the corresponding header that a server sends to set that cookie in the browser.
+After the headers is a blank line, and then the body of the response. We haven't shown it all here, just the first few characters of the HTML that is being received, out of the 18,132 that the server has sent.
+
+Next, we'll show an example of a response that is returned if a requested page is not found:
+
+HTTP/1.1 404 Not Found
+Server: nginx
+Content-Length: 55
+Content-Type: text/html
+<!DOCTYPE html><html><body>Page Not Found</body></html>
+It is similar to the previous example, but the status is now 404 Not Found. If you've ever been browsing the internet and received a 404 error, this is the type of response your browser received. The various status codes are grouped by the type of success or failure they indicate:
+
+100-199: The server sends codes in this range to indicate protocol changes or that more data is required. You don't have to worry about these.
+200-299: A status code in this range indicates the successful handling of a response. The most common one you will deal with is 200 OK.
+300-399: A status code in this range means the page you are requesting has moved to another address. An example of this is a URL shortening service that would redirect you from the short URL to the full one when you visit it. Common responses are 301 Moved Permanently or 302 Found. When sending a redirect response, the server will also include a Location header that contains the URL that should be redirected to.
+400-499: A status code in this range means that the request could not be handled because there was a problem with what the client sent. This is in contrast to a request not being able to be handled due to a problem on the server (we will discuss those soon). We've already seen a 404 Not Found response; this is due to a bad request because the client is requesting a document that does not exist. Some other common responses are 401 Unauthorized (the client should log in) and 403 Forbidden (the client is not allowed to access the specific resource). Both problems could be avoided by having the client login, hence them being considered client-side (request) problems.
+500-599: Status codes in this range indicate an error on the server's side. The client shouldn't expect to be able to adjust the request to fix the problem. When working with Django, the most common server error status you will see is 500 Internal Server Error. This will be generated if your code raises an exception. Another common one is 504 Gateway Timeout, which might occur if your code is taking too long to run. The other variants that are common to see are 502 Bad Gateway and 503 Service Unavailable, which generally mean there is a problem with your application's hosting in some way.
+These are only some of the most common HTTP statuses. You can find a more complete list at https://developer.mozilla.org/en-US/docs/Web/HTTP/Status. Like HTTP headers, though, statuses are arbitrary, and an application can return custom statuses. It is up to the server and clients to decide what these custom statuses and codes mean.
+
+If this is your first time being introduced to the HTTP protocol, there's quite a lot of information to take in. Luckily, Django does all the hard work and encapsulates the incoming data into an HttpRequest object. Most of the time, you don't need to know about most of the information coming in, but it's available if you need it. Likewise, when sending a response, Django encapsulates your data in an HttpResponse object. Normally you just set the content to return, but you also have the freedom to set HTTP status codes and headers. We will discuss how to access and set the information in HttpRequest and HttpResponse later in this chapter.

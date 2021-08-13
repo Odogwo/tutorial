@@ -1,0 +1,5 @@
+
+
+A common design pattern in application design is Model View Controller (MVC), where the model of the application (its data) is displayed in one or more views and a controller marshals interaction between the model and view. Django follows a somewhat similar paradigm called Model View Template (MVT).
+
+Like MVC, MVT also uses models for storing data. However, with MVT, a view will query a model and then render it with a template. Usually, with MVC languages, all three components need to be developed with the same language. With MVT, the template can be in a different language. In the case of Django, the models and views are written in Python and the Template in HTML. This means that a Python developer could work on the models and views, while a specialist HTML developer works on the HTML. We'll first explain models, views, and templates in more detail, and then look at some example scenarios where they are used.

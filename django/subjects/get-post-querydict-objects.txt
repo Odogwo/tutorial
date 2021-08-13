@@ -1,0 +1,64 @@
+
+
+GET, POST, and QueryDict Objects
+Data can come through an HTTP request as parameters on a URL or inside the body of a POST request. You might have noticed parameters in a URL when browsing the web—the text after a ?—for example, http://www.example.com/?parameter1=value1&parameter2=value2. We also saw earlier in this chapter an example of form data in a POST request, for logging in a user (the request body was username=user1&password=password1).
+
+Django automatically parses these parameter strings into QueryDict objects. The data is then available on the HttpRequest object that is passed to your view—specifically, in the HttpRequest.GET and HttpRequest.POST attributes, for URL parameters and body parameters respectively. QueryDict objects are objects that mostly behave like dictionaries, except that they can contain multiple values for a key.
+
+To show different methods of accessing items, we'll use a simple QueryDict named qd with only one key (k) as an example. The k item has three values in a list: the strings a, b, and c. The following code snippets show output from a Python interpreter.
+
+First, the QueryDict qd is constructed from a parameter string:
+
+>>> qd = QueryDict("k=a&k=b&k=c")
+When accessing items with square bracket notation or the get method, the last value for that key is returned:
+
+>>> qd["k"]
+'c'
+>>> qd.get("k")
+'c'
+To access all the values for a key, the getlist method should be used:
+
+>>> qd.getlist("k")
+['a', 'b', 'c']
+getlist will always return a list—it will be empty if the key does not exist:
+
+>>> qd.getlist("bad key")
+[]
+While getlist does not raise an exception for keys that do not exist, accessing a key that does not exist with square bracket notation will raise KeyError, like a normal dictionary. Use the get method to avoid this error.
+
+The QueryDict objects for GET and POST are immutable (they cannot be changed), so the copy method should be used to get a mutable copy if you need to change its values:
+
+>>> qd["k"] = "d"
+AttributeError: This QueryDict instance is immutable
+>>> qd2 = qd.copy()
+>>> qd2
+<QueryDict: {'k': ['a', 'b', 'c']}>
+>>> qd2["k"] = "d"
+>>> qd2["k"]
+"d"
+To give an example of how QueryDict is populated from a URL, imagine an example URL: http://127.0.0.1:8000?val1=a&val2=b&val2=c&val3.
+
+Behind the scenes, Django passes the query from the URL (everything after the ?) to instantiate a QueryDict object and attach it to the request instance that is passed to the view function. Something like this:
+
+request.GET = QueryDict("val1=a&val2=b&val2=c&val3")
+Remember, this is done to the request instance before you receive it inside your view function; you do not need to do this.
+
+In the case of our example URL, we could access the parameters inside the view function as follows:
+
+request.GET["val1"]
+Using standard dictionary access, it would return the value a:
+
+request.GET["val2"]
+Again, using standard dictionary access, there are two values set for the val2 key, so it would return the last value, c:
+
+request.GET.getlist("val2")
+This would return a list of all the values for val2: ["b", "c"]:
+
+request.GET["val3"]
+This key is in the query string but has no value set, so this returns an empty string:
+
+request.GET["val4"]
+This key is not set, so KeyError will be raised. Use request.GET.get("val4") instead, which will return None:
+
+request.GET.getlist("val4")
+Since this key is not set, an empty list ([]) will be returned.
