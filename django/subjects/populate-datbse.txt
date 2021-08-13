@@ -1,0 +1,28 @@
+
+
+Populating the Bookr Project's Database
+
+
+Although we know how to create database records for the project, in the next few chapters, we will have to create a lot of records to work with the project. For that reason, we have created a script that can make things easy for us. This script populates the database by reading a .csv (Comma-Separated Values) file consisting of many records. Follow the next few steps to populate the project's database:
+
+Create the following folder structure inside the project directory:
+bookr/reviews/management/commands/
+
+
+
+Copy the loadcsv.py file from the following location and WebDevWithDjangoData.csv into the folder created. This can be found on the GitHub repository for this book at http://packt.live/3pvbCLM.
+
+
+Because loadcsv.py is placed inside the management/commands folder, now it works like a Django custom management command. 
+
+You can go through the loadcsv.py file and read more about writing Django custom management commands at this link: https://docs.djangoproject.com/en/3.0/howto/custom-management-commands/.
+
+Now let's recreate a fresh database. Delete your SQL database file present in the project folder:
+rm reviews/db.sqlite3
+To create a fresh database again, execute the Django migrate command:
+python manage.py migrate
+Now you can see the newly created db.sqlite3 file under the reviews folder.
+
+Execute the custom management command loadcsv to populate the database:
+python manage.py loadcsv --csv reviews/management/commands/WebDevWithDjangoData.csv
+Using DB Browser for SQLite, verify that all the tables created by the bookr project are populated.
