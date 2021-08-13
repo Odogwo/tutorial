@@ -1,0 +1,8 @@
+
+
+Field Options
+Django provides a way to define field options to a model's field. These field options are used to set a value or a constraint, and so on. For example, we can set a default value for a field using default=<value>, to ensure that every time a record is created in the database for the field, it is set to a default value specified by us. Following are the two field options that we have used while defining the Publisher model:
+
+help_text: This is a field option that helps us add descriptive text for a field that gets automatically included for Django forms.
+max_length: This option is provided to CharField where it defines the maximum length of the field in terms of the number of characters.
+Django has many more field types and field options that can be explored from the extensive official Django documentation

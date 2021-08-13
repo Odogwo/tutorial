@@ -1,0 +1,5 @@
+
+py manage.py showmigrations
+
+
+manage.py sqlmigrate reviews 0001_initial 

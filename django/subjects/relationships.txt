@@ -1,0 +1,173 @@
+
+Relationships
+One of the powers of relational databases is the ability to establish relationships between data stored across database tables. Relationships help maintain data integrity by establishing the correct references across tables, which in turn helps maintain the database. Relationship rules, on the other hand, ensure data consistency and prevent duplicates.
+
+In a relational database, there can be the following types of relations:
+
+Many to one
+Many to many
+One to one
+Let's explore each relationship in detail.
+
+Many to One
+In this relationship, many records (rows/entries) from one table can refer to one record (row/entry) in another table. For example, there can be many books produced by one publisher. This is a case of a many-to-one relationship. To establish this relationship, we need to use the database's foreign keys. A foreign key in a relational database establishes the relationship between a field from one table and a primary key from a different table.
+
+For example, say you have data about employees belonging to different departments stored in a table called employee_info with their employee ID as the primary key alongside a column that stores their department name; this table also contains a column that stores that department's department ID. Now, there's another table called departments_info, which has department ID as the primary key. In this case, then, the department ID is a foreign key in the employee_info table.
+
+In our bookr app, the Book model can have a foreign key referring to the primary key of the Publisher table. Since we have already created the models for Book, Contributor, and Publisher, now let's establish a many-to-one relationship across the Book and Publisher models. For the Book model, add the last line:
+
+
+
+
+class Book(models.Model):
+    """A published book."""
+    title = models.CharField\
+            (max_length=70, \
+             help_text="The title of the book.")
+    publication_date = models.DateField\
+                       (verbose_name=\
+                        "Date the book was published.")
+    isbn = models.CharField\
+           (max_length=20, \
+            verbose_name="ISBN number of the book.")
+    publisher = models.ForeignKey\
+                (Publisher, on_delete=models.CASCADE)
+Now the newly added publisher field is establishing a many-to-one relationship between Book and Publisher using a foreign key. This relationship ensures the nature of a many-to-one relationship, which is that many books can have one publisher:
+
+models.ForeignKey: This is the field option to establish a many-to-one relationship.
+
+
+Publisher: When we establish relationships with different tables in Django, we refer to the model that creates the table; in this case, the Publisher table is created by the Publisher model (or the Python class Publisher).
+
+
+on_delete: This is a field option that determines the action to be taken upon the deletion of the referenced object. In this case, the on_delete option is set to CASCADE(models.CASCADE), which deletes the referenced objects.
+
+
+For example, assume a publisher has published a set of books. For some reason, if the publisher has to be deleted from the application, the next action is CASCADE, which means delete all the referenced books from the application. 
+
+
+There are many more on_delete actions, such as the following:
+
+PROTECT: This prevents the deletion of the record unless all the referenced objects are deleted.
+SET_NULL: This sets a null value if the database field has been previously configured to store null values.
+SET_DEFAULT: Sets to a default value on the deletion of the referenced object.
+For our book review application, we will be using only the CASCADE option.
+
+Many to Many
+In this relationship, multiple records in a table can have a relationship with multiple records in a different table. For example, a book can have multiple co-authors and each author (contributor) could have written multiple books. So, this forms a many-to-many relationship between the Book and Contributor tables:
+
+Figure 2.15: Many-to-many relationship between books and co-authors
+Figure 2.15: Many-to-many relationship between books and co-authors
+
+In models.py, for the Book model, add the last line as shown here:
+
+class Book(models.Model):
+    """A published book."""
+    title = models.CharField\
+            (max_length=70, \
+             help_text="The title of the book.")
+    publication_date = models.DateField\
+                       (verbose_name=\
+                        "Date the book was published.")
+    isbn = models.CharField\
+           (max_length=20, \
+            verbose_name="ISBN number of the book.")
+    publisher = models.ForeignKey\
+                (Publisher, on_delete=models.CASCADE)
+    contributors = models.ManyToManyField\
+                   ('Contributor', through="BookContributor")
+The newly added contributors field establishes a many-to-many relationship with Book and Contributor using the ManyToManyField field type:
+
+models.ManyToManyField: This is the field type to establish a many-to-many relationship.
+through: This is a special field option for many-to-many relationships. When we have a many-to-many relationship across two tables, if we want to store some extra information about the relationship, then we can use this to establish the relationship via an intermediary table.
+For example, we have two tables, namely Book and Contributor, where we need to store the information on the type of contributor for the book, such as Author, Co-author, or Editor. Then the type of contributor is stored in an intermediary table called BookContributor. Here is how the BookContributor table/model looks. Make sure you include this model in reviews/models.py:
+
+class BookContributor(models.Model):
+    class ContributionRole(models.TextChoices):
+        AUTHOR = "AUTHOR", "Author"
+        CO_AUTHOR = "CO_AUTHOR", "Co-Author"
+        EDITOR = "EDITOR", "Editor"
+    book = models.ForeignKey\
+           (Book, on_delete=models.CASCADE)
+    contributor = models.ForeignKey\
+                  (Contributor, \
+                   on_delete=models.CASCADE)
+    role = models.CharField\
+           (verbose_name=\
+            "The role this contributor had in the book.", \
+            choices=ContributionRole.choices, max_length=20)
+Note
+
+The complete models.py file can be viewed at this link: http://packt.live/3hmFQxn.
+
+An intermediary table such as BookContributor establishes relationships by using foreign keys to both the Book and Contributor tables. It can also have extra fields that can store information about the relationship the BookContributor model has with the following fields:
+
+book: This is a foreign key to the Book model. As we saw previously, on_delete=models.CASCADE will delete an entry from the relationship table when the relevant book is deleted from the application.
+Contributor: This is again a foreign key to the Contributor model/table. This is also defined as CASCADE upon deletion.
+role: This is the field of the intermediary model, which stores the extra information about the relationship between Book and Contributor.
+class ContributionRole(models.TextChoices): This can be used to define a set of choices by creating a subclass of models.TextChoices. For example, ContributionRole is a subclass created out of TextChoices, which is used by the roles field to define Author, Co-Author, and Editor as a set of choices.
+choices: This refers to a set of choices defined in the models, and they are useful when creating Django Forms using the models.NoteWhen the through field option is not provided while establishing a many-to-many relationship, Django automatically creates an intermediary table to manage the relationship.
+
+
+
+
+
+One-to-One Relationships
+In this relationship, one record in a table will have a reference to only one record in a different table. For example, a person can have only one driver's license, so a person to their driver's license could form a one-to-one relationship:
+
+Figure 2.16: Example of a one-to-one relationship
+Figure 2.16: Example of a one-to-one relationship
+
+The OneToOneField can be used to establish a one-to-one relationship, as shown here:
+
+class DriverLicence(models.Model):
+    person = models.OneToOneField\
+             (Person, on_delete=models.CASCADE)
+    licence_number = models.CharField(max_length=50)
+Now that we have explored database relationships, let's come back to our bookr application and add one more model there.
+
+
+
+
+
+
+Adding the Review Model
+We've already added the Book and Publisher models to the reviews/models.py file. The last model that we are going to add is the Review model. The following code snippet should help us do this:
+
+from django.contrib import auth
+class Review(models.Model):
+    content = models.TextField\
+              (help_text="The Review text.")
+    rating = models.IntegerField\
+             (help_text="The rating the reviewer has given.")
+    date_created = models.DateTimeField\
+                   (auto_now_add=True, \
+                    help_text=\
+                    "The date and time the review was created.")
+    date_edited = models.DateTimeField\
+                  (null=True, \
+                   help_text=\
+                   "The date and time the review was last edited.")
+    creator = models.ForeignKey\
+              (auth.get_user_model(), on_delete=models.CASCADE)
+    book = models.ForeignKey\
+           (Book, on_delete=models.CASCADE, \
+            help_text="The Book that this review is for.")
+
+
+
+
+Note
+
+The complete models.py file can be viewed at this link: http://packt.live/3hmFQxn.
+
+The review model/table will be used to store user-provided review comments and ratings for books. It has the following fields:
+
+content: This field stores the text for a book review, hence the field type used is TextField as this can store a large amount of text.
+rating: This field stores the review rating of a book. Since the rating is going to be an integer, the field type used is IntegerField.
+date_created: This field stores the time and date when the review was written, hence the field type is DateTimeField.
+date_edited: This field stores the date and time whenever a review is edited. The field type is again DateTimeField.
+Creator: This field specifies the review creator or the person who writes the book review. Notice that this is a foreign key to auth.get_user_model(), which is referring to the User model from Django's built-in authentication module. It has a field option on_delete=models.CASCADE. This explains that when a user is deleted from the database, all the reviews written by that user will be deleted.
+Book: Reviews have a field called book, which is a foreign key to the Book model. This is because for a book review application, reviews have to be written, and a book can have many reviews, so this is a many-to-one relationship. This is also defined with a field option, on_delete=models.CASCADE, because once the book is deleted, there is no point in retaining the reviews in the application. So, when a book is deleted, all the reviews referring to the book will also get deleted.
+
+

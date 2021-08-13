@@ -1,0 +1,8 @@
+
+
+Field Types
+As we can see, each of these fields is defined to have the following types:
+
+CharField: This field type is used to store shorter string fields, for example, Packt Publishing. For very large strings, we use TextField.
+EmailField: This is similar to CharField, but validates whether the string represents a valid email address, for example, customersupport@packtpub.com.
+URLField: This is again similar to CharField, but validates whether the string represents a valid URL, for example, https://www.packtpub.com.
