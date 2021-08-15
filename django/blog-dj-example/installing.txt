@@ -1,0 +1,48 @@
+Installing Django
+If you have already installed Django, you can skip this section and jump directly to the Creating your first project section. Django comes as a Python package and thus can be installed in any Python environment. If you haven't installed Django yet, the following is a quick guide to installing it for local development.
+
+Django 3 continues the path of providing new features while maintaining the core functionalities of the framework. The 3.0 release includes for the first time Asynchronous Server Gateway Interface (ASGI) support, which makes Django fully async-capable. Django 3.0 also includes official support for MariaDB, new exclusion constraints on PostgreSQL, filter expressions enhancements, and enumerations for model field choices, as well as other new features.
+
+Django 3.0 supports Python 3.6, 3.7, and 3.8. In the examples in this book, we will use Python 3.8.2. If you're using Linux or macOS, you probably have Python installed. If you're using Windows, you can download a Python installer at https://www.python.org/downloads/windows/.
+
+If you're not sure whether Python is installed on your computer, you can verify this by typing python into the shell. If you see something like the following, then Python is installed on your computer:
+
+Python 3.8.2 (v3.8.2:7b3ab5921f, Feb 24 2020, 17:52:18)
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+If your installed Python version is lower than 3.6, or if Python is not installed on your computer, download Python 3.8.2 from https://www.python.org/downloads/ and install it.
+
+Since you will be using Python 3, you don't have to install a database. This Python version comes with a built-in SQLite database. SQLite is a lightweight database that you can use with Django for development. If you plan to deploy your application in a production environment, you should use a full-featured database, such as PostgreSQL, MySQL, or Oracle. You can find more information about how to get your database running with Django at https://docs.djangoproject.com/en/3.0/topics/install/#database-installation.
+
+Creating an isolated Python environment
+Since version 3.3, Python has come with the venv library, which provides support for creating lightweight virtual environments. Each virtual environment has its own Python binary and can have its own independent set of installed Python packages in its site directories. Using the Python venv module to create isolated Python environments allows you to use different package versions for different projects, which is far more practical than installing Python packages system-wide. Another advantage of using venv is that you won't need any administration privileges to install Python packages.
+
+Create an isolated environment with the following command:
+
+python -m venv my_env
+This will create a my_env/ directory, including your Python environment. Any Python libraries you install while your virtual environment is active will go into the my_env/lib/python3.8/site-packages directory.
+
+Run the following command to activate your virtual environment:
+
+source my_env/bin/activate
+The shell prompt will include the name of the active virtual environment enclosed in parentheses, as follows:
+
+(my_env)laptop:~ zenx$
+You can deactivate your environment at any time with the deactivate command. You can find more information about venv at https://docs.python.org/3/library/venv.html.
+
+Installing Django with pip
+The pip package management system is the preferred method for installing Django. Python 3.8 comes with pip preinstalled, but you can find pip installation instructions at https://pip.pypa.io/en/stable/installing/.
+
+Run the following command at the shell prompt to install Django with pip:
+
+pip install "Django==3.0.*"
+Django will be installed in the Python site-packages/ directory of your virtual environment.
+
+Now check whether Django has been successfully installed. Run python on a terminal, import Django, and check its version, as follows:
+
+>>> import django
+>>> django.get_version()
+'3.0.4'
+If you get an output like 3.0.X, Django has been successfully installed on your machine.
+
+Django can be installed in several other ways. You can find a complete installation guide at https://docs.djangoproject.com/en/3.0/topics/install/.

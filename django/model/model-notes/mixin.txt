@@ -1,0 +1,12 @@
+
+
+Creating a model mixin with URL-related methods
+For every model that has its own distinct detail page, it is good practice to define the get_absolute_url() method. This method can be used in templates and also in the Django admin site to preview the saved object. However, get_absolute_url() is ambiguous, as it returns the URL path instead of the full URL.
+
+In this recipe, we will look at how to create a model mixin that provides simplified support for model-specific URLs. This mixin will enable you to do the following:
+
+Allow you to define either the URL path or the full URL in your model
+Generate the other URL automatically, based on the one that you defined
+Define the get_absolute_url() method behind the scenes
+Getting ready
+If you haven't yet done so, create the myproject.apps.core app where you will store your model mixins. Then, create a models.py file in the core package. Alternatively, if you create a reusable app, put the mixins in a base.py file in that app.

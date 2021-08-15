@@ -1,0 +1,4 @@
+
+At present, all ForeignKey relations in the reviews models are defined with an on_delete=CASCADE behavior. For instance, think of a case wherein an admin deletes one of the publishers. This would delete all the books that are associated with the publisher. We do not want that to happen, and that is precisely the behavior that we will be changing in this exercise:
+
+

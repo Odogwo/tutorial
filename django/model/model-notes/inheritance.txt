@@ -1,0 +1,40 @@
+Django's model inheritance supports three types of inheritance: abstract base classes, multi-table inheritance, and proxy models. Model mixins are abstract model classes, in that we define them by using an abstract Meta class, with specified fields, properties, and methods. When you create a model such as Idea, as shown in the preceding example, it inherits all of the features from CreationModificationDateMixin, MetaTagsMixin, and UrlMixin. All of the fields of these abstract classes are saved in the same database table as the fields of the extending model. In the following recipes, you will learn how to define your model mixins.
+
+
+
+
+In normal Python class inheritance, if there is more than one base class, and all of them implement a specific method, and you call that method on the instance of a child class, only the method from the first parent class will be called, as in the following example:
+
+>>> class A(object):
+... def test(self):
+...     print("A.test() called")
+... 
+
+>>> class B(object):
+... def test(self):
+...     print("B.test() called")
+... 
+
+>>> class C(object):
+... def test(self):
+...     print("C.test() called")
+... 
+
+>>> class D(A, B, C):
+... def test(self):
+...     super().test()
+...     print("D.test() called")
+
+>>> d = D()
+>>> d.test()
+A.test() called
+D.test() called
+
+
+
+
+
+he Django framework does some magic with metaclasses that calls the save() and delete() methods from each of the base classes.
+That means that you can confidently do pre-save, post-save, pre-delete, and post-delete manipulations for specific fields defined specifically in the mixin by overwriting the save() and delete() methods.
+
+To learn more about the different types of model inheritance, refer to the official Django documentation, available at https://docs.djangoproject.com/en/2.2/topics/db/models/#model-inheritance.

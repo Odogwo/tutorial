@@ -1,0 +1,46 @@
+
+Exercise 3.01: Implementing a Simple Function-Based View
+In this exercise, we will write a very basic function-based view and use the associated URL configuration to display the message Welcome to Bookr! in a web browser. We will also tell the user how many books we have in the database:
+
+First, ensure that ROOT_URLCONF in bookr/settings.py is pointing to the project's URL file by adding in the following command:
+ROOT_URLCONF = 'bookr.urls'
+Open the bookr/reviews/views.py file and add the following code snippet:
+from django.http import HttpResponse
+from .models import Book
+def welcome_view(request):
+    message = f"<html><h1>Welcome to Bookr!</h1> "\
+"<p>{Book.objects.count()} books and counting!</p></html>"
+    return HttpResponse(message)
+First, we import the HttpResponse class from the django.http module. Next, we define the welcome_view function, which can display the message Welcome to Bookr! in a web browser. The request object is a function parameter that carries the HTTP request object. The next line defines the message variable, which contains HTML that displays the header, followed by a line that counts the number of books available in the database.
+
+In the last line, we return an HttpResponse object with the string associated with the message variable. When the welcome_view view function is called, it will display the message Welcome to Bookr! 2 Books and counting in the web browser.
+
+Now, create the URL mapping to call the newly created view function. Open the project URL file, bookr/urls.py, and add the list of urlpatterns as follows:
+from django.contrib import admin
+from django.urls import include, path
+urlpatterns = [path('admin/', admin.site.urls),\
+               path('', include('reviews.urls'))]
+The first line in the list of urlpatterns, that is, path('admin/', admin.site.urls) routes to the admin URLs if admin/ is present in the URL path (for example, http://0.0.0.0:8000/admin).
+
+Similarly, consider the second line, path('', include('reviews.urls')). Here, the path mentioned is an empty string, ''. If the URL does not have any specific path after http://hostname:port-number/ (for example, http://0.0.0.0:8000/), it includes the urlpatterns present in review.urls.
+
+The include function is a shortcut that allows you to combine URL configurations. It is common to keep one URL configuration per application in your Django project. Here, we've created a separate URL configuration for the reviews app and have added it to our project-level URL configuration.
+
+Since we do not have the URL module reviews.urls yet, create a file called bookr/reviews/urls.py, and add the following lines of code:
+from django.contrib import admin
+from django.urls import path
+from . import views
+urlpatterns = [path('', views.welcome_view, \
+                    name='welcome_view'),]
+Here, we have used an empty string again for the URL path. So, when the URL http://0.0.0.0:8000/ is invoked, after getting routed from bookr/urls.py into bookr/reviews/urls.py, this pattern invokes the welcome_view view function.
+After making changes to the two files, we have the necessary URL configuration ready to call the welcome_view view. Now, start the Django server with python manage.py runserver and type in http://0.0.0.0:8000 or http://127.0.0.1:8000 in your web browser. You should be able to see the message Welcome to Bookr!:
+Figure 3.1: Displaying "Welcome to Bookr!" and the number of books on the home page
+Figure 3.1: Displaying "Welcome to Bookr!" and the number of books on the home page
+
+Note
+
+If there is no URL match, Django invokes error handling, such as displaying a 404 Page not found message or something similar.
+
+In this exercise, we learned how to write a basic view function and do the associated URL mapping. We have created a web page that displays a simple message to the user and reports how many books are currently in our database.
+
+However, the astute reader will have noticed that it doesn't look very nice to have HTML code sitting inside our Python function as in the preceding example. As our views get bigger, this will become even more unsustainable. Therefore, we now turn our attention to where our HTML code is supposed to be – inside templates.

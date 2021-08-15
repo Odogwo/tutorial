@@ -1,0 +1,25 @@
+
+Template Variables
+A template variable is represented in between two curly braces, as shown here:
+
+{{ variable }}
+
+
+
+<ul>
+    {% for element in element_list %}
+        <li>{{ element.title }}</li>
+    {% endfor %}
+</ul>
+
+
+
+
+{% comment %}
+    <p>This text has been commented out</p>
+{% endcomment %}
+
+
+
+
+{{ variable|filter }}

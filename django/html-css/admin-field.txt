@@ -1,0 +1,31 @@
+<fieldset class="module aligned ">
+    <div class="form-row errors field-name">
+        <ul class="errorlist"><li>This field is required.</li></ul>
+            <div>
+                    <label class="required" for="id_name">Name:</label>
+                        <input type="text" name="name" class="vTextField"
+                         maxlength="50" required id="id_name">
+                    <div class="help">The name of the Publisher.</div>
+            </div>
+    </div>
+    <div class="form-row errors field-website">
+        <ul class="errorlist"><li>Enter a valid URL.</li></ul>
+            <div>
+                    <label class="required" for="id_website">Website:</label>
+                        <input type="url" name="website" value="packtcom"
+                         class="vURLField" maxlength="200" required
+                         id="id_website">
+                    <div class="help">The Publisher's website.</div>
+            </div>
+    </div>
+    <div class="form-row errors field-email">
+        <ul class="errorlist"><li>Enter a valid email address.</li></ul>
+            <div>
+                    <label class="required" for="id_email">Email:</label>
+                        <input type="email" name="email" value="infoatpackt.com"
+                         class="vTextField" maxlength="254" required
+                         id="id_email">
+                    <div class="help">The Publisher's email address.</div>
+            </div>
+  </div>
+</fieldset>

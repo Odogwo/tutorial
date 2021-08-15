@@ -1,0 +1,18 @@
+Building a Blog Application
+Django is a powerful Python web framework with a relatively shallow learning curve. You can easily build simple web applications in a short time. Django is also a robust and scalable framework that can be used to create large-scale web applications with complex requirements and integrations. This makes Django attractive for both beginners and expert programmers.
+
+In this book, you will learn how to build complete Django projects that are ready for production use. If you haven't installed Django yet, you will discover how to do so in the first part of this chapter.
+
+This chapter covers how to create a simple blog application using Django. The chapter's purpose is to help you to get a general idea of how the framework works, an understanding of how the different components interact with each other, and the skills to easily create Django projects with basic functionality. You will be guided through the creation of a complete project, but I will go into more detail on this later. The different framework components will be explored in detail throughout this book.
+
+This chapter will cover the following topics:
+
+Installing Django
+Creating and configuring a Django project
+Creating a Django application
+Designing models and generating model migrations
+Creating an administration site for your models
+Working with QuerySets and managers
+Building views, templates, and URLs
+Adding pagination to list views
+Using Django's class-based views

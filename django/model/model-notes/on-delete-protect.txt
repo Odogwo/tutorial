@@ -1,0 +1,2 @@
+
+Because the on_delete argument is PROTECT, our attempt to delete the object with dependencies will throw an error. If we used this approach in our model, we would need to delete objects in the ForeignKey relation before we deleted the original object. In this case, it would mean deleting the BookContributor object before deleting the Contributor objec

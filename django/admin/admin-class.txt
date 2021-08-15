@@ -1,0 +1,9 @@
+
+
+class ReviewAdmin(admin.ModelAdmin):
+	exclude = ('date_edited')
+
+
+
+class ModelAdmin(admin.ModelAdmin):
+	fields = ('content', 'rating', 'creator', 'book')

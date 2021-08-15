@@ -1,0 +1,61 @@
+
+Django views can be broadly classified into two types, function-based views and class-based views. In this chapter, we will learn about function-based views in Django.
+
+Function-Based Views
+As the name implies, function-based views are implemented as Python functions. To understand how they work, consider the following snippet, which shows a simple view function named home_page:
+
+from django.http import HttpResponse
+def home_page(request):
+    message = "<html><h1>Welcome to my Website</h1></html>"
+    return HttpResponse(message)
+The view function defined here, named home_page, takes a request object as an argument and returns an HttpResponse object having the Welcome to my Website message. The advantage of using function-based views is that, since they are implemented as simple Python functions, they are easier to learn and also easily readable for other programmers. The major disadvantage of function-based views is that the code cannot be re-used and made as concise as class-based views for generic use cases.
+
+Class-Based Views
+As the name implies, class-based views are implemented as Python classes. Using the principles of class inheritance, these classes are implemented as subclasses of Django's generic view classes. Unlike function-based views, where all the view logic is expressed explicitly in a function, Django's generic view classes come with various pre-built properties and methods that can provide shortcuts to writing clean, reusable views. This property comes in handy quite often during web development; for example, developers often need to render an HTML page without needing any data inserted from the database, or any customization specific to the user. In this case, it is possible to simply inherit from Django's TemplateView, and specify the path of the HTML file. The following is an example of a class-based view that can display the same message as in the function-based view example:
+
+from django.views.generic import TemplateView
+class HomePage(TemplateView):
+    template_name = 'home_page.html'
+In the preceding code snippet, HomePage is a class-based view inheriting Django's TemplateView from the django.views.generic module. The class attribute template_name defines the template to render when the view is invoked. For the template, we add an HTML file to our templates folder with the following content:
+
+<html><h1>Welcome to my Website</h1></html>
+This is a very basic example of class-based views, which will be explored further in Chapter 11, Advanced Templating and Class-Based Views. The major advantage of using class-based views is that fewer lines of code need to be used to implement the same functionality as compared to function-based views. Also, by inheriting Django's generic views, we can keep the code concise and avoid the duplication of code. However, a disadvantage of class-based views is that the code is often less readable for someone new to Django, which means that learning about it is usually a longer process, as compared to function-based views.
+
+URL Configuration
+Django views cannot work on their own in a web application. When a web request is made to the application, Django's URL configuration takes care of routing the request to the appropriate view function to process the request. A typical URL configuration in the urls.py file in Django looks like this:
+
+from . import views
+urlpatterns = [path('url-path/' views.my_view, name='my-view'),]
+Here, urlpatterns is the variable defining the list of URL paths, and 'url-path/' defines the path to match.
+
+views.my_view is the view function to invoke when there is a URL match, and name='my-view' is the name of the view function used to refer to the view. There may be a situation wherein, elsewhere in the application, we want to get the URL of this view. We wouldn't want to hardcode the value, as it would then have to be specified twice in the codebase. Instead, we can access the URL by using the name of the view, as follows:
+
+from django.urls import reverse
+url = reverse('my-view')
+If needed, we can also use a regular expression in a URL path to match string patterns using re_path():
+
+urlpatterns = [re_path\
+               (r'^url-path/(?P<name>pattern)/$', views.my_view, \
+                name='my-view')]
+Here, name refers to the pattern name, which can be any Python regular expression pattern, and this needs to be matched before calling the defined view function. You can also pass parameters from the URL into the view itself, for example:
+
+urlpatterns = [path(r'^url-path/<int:id>/', views.my_view, \
+               name='my-view')]
+In the preceding example, <int:id> tells Django to look for URLs that contain an integer at this position in the string, and to assign the value of that integer to the id argument. This means that if the user navigates to /url-path/14/, the id=14 keyword argument is passed to the view. This is often useful when a view needs to look up a specific object in the database and return corresponding data. For example, suppose we had a User model, and we wanted the view to display the user's name.
+
+The view could be written as follows:
+
+def my_view(request, id):
+    user = User.objects.get(id=id)
+    return HttpResponse(f"This user's name is \
+    { user.first_name } { user.last_name }")
+When the user accesses /url-path/14/, the preceding view is called, and the argument id=14 is passed into the function.
+
+Here is the typical workflow when a URL such as http://0.0.0.0:8000/url-path/ is invoked using a web browser:
+
+An HTTP request would be made to the running application for the URL path. Upon receiving the request, it reaches for the ROOT_URLCONF setting present in the settings.py file:
+ROOT_URLCONF = 'project_name.urls'
+This determines the URL configuration file to be used first. In this case, it is the URL file present in the project directory project_name/urls.py.
+
+Next, Django goes through the list named urlpatterns, and once it matches the url-path/ with the path present in the URL http://0.0.0.0:8000/url-path/, it invokes the corresponding view function.
+URL configuration is sometimes also referred to as URL conf or URL mapping, and these terms are often used interchangeably. To understand views and URL mapping better, let's start with a simple exercise.

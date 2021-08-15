@@ -1,0 +1,37 @@
+https://www.digitalocean.com/community/tutorials/working-with-django-templates-static-files#:~:text=Using%20the%20collectstatic%20command%2C%20Django%20looks%20for%20all,folder%20called%20staticfiles%20in%20our%20project%20root%20directory.
+
+
+$ django-admin startproject djangotemplates
+
+STATIC_URL = '/static/'
+
+# Add these new lines
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+djangotemplates
+--djangotemplates
+----**init**.py
+----settings.py
+----urls.py
+----wsgi.py
+--example
+----migrations
+------**init**.py
+----admin.py
+----apps.py
+----models.py
+----tests.py
+----views.py
+--static
+----css
+------main.cs
+----js
+------main.js
+--manage.py
+
+$ python manage.py startapp example

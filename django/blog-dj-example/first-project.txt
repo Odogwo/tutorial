@@ -1,0 +1,143 @@
+
+Creating your first project
+Our first Django project will be building a complete blog. Django provides a command that allows you to create an initial project file structure. Run the following command from your shell:
+
+django-admin startproject mysite
+This will create a Django project with the name mysite.
+
+Avoid naming projects after built-in Python or Django modules in order to avoid conflicts.
+
+Let's take a look at the project structure generated:
+
+mysite/
+    manage.py
+    mysite/
+      __init__.py
+      asgi.py
+      wsgi.py
+      settings.py
+      urls.py
+These files are as follows:
+
+manage.py: This is a command-line utility used to interact with your project. It is a thin wrapper around the django-admin.py tool. You don't need to edit this file.
+mysite/: This is your project directory, which consists of the following files:
+__init__.py: An empty file that tells Python to treat the mysite directory as a Python module.
+asgi.py: This is the configuration to run your project as ASGI, the emerging Python standard for asynchronous web servers and applications.
+settings.py: This indicates settings and configuration for your project and contains initial default settings.
+urls.py: This is the place where your URL patterns live. Each URL defined here is mapped to a view.
+wsgi.py: This is the configuration to run your project as a Web Server Gateway Interface (WSGI) application.
+The generated settings.py file contains the project settings, including a basic configuration to use an SQLite3 database and a list named INSTALLED_APPS that contains common Django applications that are added to your project by default. We will go through these applications later in the Project settings section.
+
+Django applications contain a models.py file where data models are defined. Each data model is mapped to a database table. To complete the project setup, you need to create the tables associated with the models of the applications listed in INSTALLED_APPS. Django includes a migration system that manages this.
+
+Open the shell and run the following commands:
+
+cd mysite
+python manage.py migrate
+You will note an output that ends with the following lines:
+
+Applying contenttypes.0001_initial... OK
+Applying auth.0001_initial... OK
+Applying admin.0001_initial... OK
+Applying admin.0002_logentry_remove_auto_add... OK
+Applying admin.0003_logentry_add_action_flag_choices... OK
+Applying contenttypes.0002_remove_content_type_name... OK
+Applying auth.0002_alter_permission_name_max_length... OK
+Applying auth.0003_alter_user_email_max_length... OK
+Applying auth.0004_alter_user_username_opts... OK
+Applying auth.0005_alter_user_last_login_null... OK
+Applying auth.0006_require_contenttypes_0002... OK
+Applying auth.0007_alter_validators_add_error_messages... OK
+Applying auth.0008_alter_user_username_max_length... OK
+Applying auth.0009_alter_user_last_name_max_length... OK
+Applying auth.0010_alter_group_name_max_length... OK
+Applying auth.0011_update_proxy_permissions... OK
+Applying sessions.0001_initial... OK
+The preceding lines are the database migrations that are applied by Django. By applying migrations, the tables for the initial applications are created in the database. You will learn about the migrate management command in the Creating and applying migrations section of this chapter.
+
+Running the development server
+Django comes with a lightweight web server to run your code quickly, without needing to spend time configuring a production server. When you run the Django development server, it keeps checking for changes in your code. It reloads automatically, freeing you from manually reloading it after code changes. However, it might not notice some actions, such as adding new files to your project, so you will have to restart the server manually in these cases.
+
+Start the development server by typing the following command from your project's root folder:
+
+python manage.py runserver
+You should see something like this:
+
+Watching for file changes with StatReloader
+Performing system checks...
+System check identified no issues (0 silenced).
+January 01, 2020 - 10:00:00
+Django version 3.0, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Now open http://127.0.0.1:8000/ in your browser. You should see a page stating that the project is successfully running, as shown in the following screenshot:
+
+
+Figure 1.1: The default page of the Django development server
+
+The preceding screenshot indicates that Django is running. If you take a look at your console, you will see the GET request performed by your browser:
+
+[01/Jan/2020 17:20:30] "GET / HTTP/1.1" 200 16351
+Each HTTP request is logged in the console by the development server. Any error that occurs while running the development server will also appear in the console.
+
+You can run the Django development server on a custom host and port or tell Django to load a specific settings file, as follows:
+
+python manage.py runserver 127.0.0.1:8001 \--settings=mysite.settings
+When you have to deal with multiple environments that require different configurations, you can create a different settings file for each environment.
+
+Remember that this server is only intended for development and is not suitable for production use. In order to deploy Django in a production environment, you should run it as a WSGI application using a web server, such as Apache, Gunicorn, or uWSGI, or as an ASGI application using a server like Uvicorn or Daphne. You can find more information on how to deploy Django with different web servers at https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/.
+
+Chapter 14, Going Live, explains how to set up a production environment for your Django projects.
+
+Project settings
+Let's open the settings.py file and take a look at the configuration of the project. There are several settings that Django includes in this file, but these are only part of all the Django settings available. You can see all the settings and their default values at https://docs.djangoproject.com/en/3.0/ref/settings/.
+
+The following settings are worth looking at:
+
+DEBUG is a Boolean that turns the debug mode of the project on and off. If it is set to True, Django will display detailed error pages when an uncaught exception is thrown by your application. When you move to a production environment, remember that you have to set it to False. Never deploy a site into production with DEBUG turned on because you will expose sensitive project-related data.
+ALLOWED_HOSTS is not applied while debug mode is on or when the tests are run. Once you move your site to production and set DEBUG to False, you will have to add your domain/host to this setting in order to allow it to serve your Django site.
+INSTALLED_APPS is a setting you will have to edit for all projects. This setting tells Django which applications are active for this site. By default, Django includes the following applications:
+django.contrib.admin: An administration site
+django.contrib.auth: An authentication framework
+django.contrib.contenttypes: A framework for handling content types
+django.contrib.sessions: A session framework
+django.contrib.messages: A messaging framework
+django.contrib.staticfiles: A framework for managing static files
+MIDDLEWARE is a list that contains middleware to be executed.
+ROOT_URLCONF indicates the Python module where the root URL patterns of your application are defined.
+DATABASES is a dictionary that contains the settings for all the databases to be used in the project. There must always be a default database. The default configuration uses an SQLite3 database.
+LANGUAGE_CODE defines the default language code for this Django site.
+USE_TZ tells Django to activate/deactivate timezone support. Django comes with support for timezone-aware datetime. This setting is set to True when you create a new project using the startproject management command.
+Don't worry if you don't understand much about what you're seeing here. You will learn the different Django settings in the following chapters.
+
+Projects and applications
+Throughout this book, you will encounter the terms project and application over and over. In Django, a project is considered a Django installation with some settings. An application is a group of models, views, templates, and URLs. Applications interact with the framework to provide some specific functionalities and may be reused in various projects. You can think of a project as your website, which contains several applications, such as a blog, wiki, or forum, that can also be used by other projects.
+
+The following diagram shows the structure of a Django project:
+
+
+Figure 1.2: The Django project/application structure
+
+Creating an application
+Now let's create your first Django application. You will create a blog application from scratch. From the project's root directory, run the following command:
+
+python manage.py startapp blog
+This will create the basic structure of the application, which looks like this:
+
+blog/
+    __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+    views.py
+These files are as follows:
+
+admin.py: This is where you register models to include them in the Django administration site—using this site is optional.
+apps.py: This includes the main configuration of the blog application.
+migrations: This directory will contain database migrations of your application. Migrations allow Django to track your model changes and synchronize the database accordingly.
+models.py: This includes the data models of your application; all Django applications need to have a models.py file, but this file can be left empty.
+tests.py: This is where you can add tests for your application.
+views.py: The logic of your application goes here; each view receives an HTTP request, processes it, and returns a response.

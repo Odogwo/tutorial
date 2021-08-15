@@ -1,3 +1,5 @@
 
 del file.txt
 
+CMD(ADMIN) rmdir /s /q + folder path
+
