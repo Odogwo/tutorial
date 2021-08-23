@@ -1,0 +1,123 @@
+https://www.thedailytechtalk.com/top-10-must-know-javascript-functions/s
+ 
+
+TOP 10 MUST KNOW JAVASCRIPT FUNCTIONS JAVASCRIPT FUNCTIONS
+
+
+1 filter()
+This function filters an array based on the condition you provide and it returns a new array which contains items which satisfy those conditions.
+
+
+
+        const temperatures = [10, 2, 30.5, 23, 41, 11.5, 3];
+
+        const coldDays = temperatures.filter(dayTemperature => {
+            return dayTemperature < 20;
+        });
+
+        console.log("Total cold days in week were: " + coldDays.length); // 4
+
+
+
+
+2 map()
+Function map() is a very simple, it loops over an array and convert each item into something else.
+
+        const readings = [10, 15, 22.5, 11, 21, 6.5, 93];
+
+        const correctedReadings = readings.map(reading => reading + 1.5);
+
+        console.log(correctedReadings); // gives [11.5, 16.5, 24, 12.5, 22.5, 8, 94.5]
+
+
+
+3 some()
+some() is very similar to filter() , but some() returns boolean instead.
+
+        const animals = [
+            {
+                name: 'Dog',
+                age: 2
+            },
+            
+            {
+                name: 'Cat',
+                age: 8
+            },
+
+             {
+                name: 'Sloth',
+                age: 6
+            },
+        ];
+
+        if(animals.some(animal => {
+            return animal.age > 4
+        })) {
+            console.log("Found some animals!")
+        }
+
+
+
+4 every()
+every() is also very similar to some() , but every() true only if every single element in array satisfy our condition.
+
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));   // true
+5 shift()
+The shift() method removes the first element from an array and returns removed element. This method changes the length of the array.
+
+const items = ['meat', 'carrot', 'ham', 'bread', 'fish'];
+items.shift()
+console.log(items); // ['carrot', 'ham', 'bread', 'fish']
+6 unshift()
+Just like shift() method removes the first element from an array unshift() adds it. This method changes the length of the array and returns the new length of the array as result.
+
+const items = ['milk', 'fish'];
+items.unshift('cookie')
+console.log(items); // ['cookie', 'milk', 'fish']
+7 slice()
+The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+
+let message = "The quick brown fox jumps over the lazy dog";
+let startIndex = message.indexOf('brown');
+let endIndex = message.indexOf('jumps');
+let newMessage = message.slice(startIndex, endIndex);
+console.log(newMessage); // "brown fox "
+8 splice()
+splice() below start at index 2 (the third place, count starts from 0!! ) of the array, and remove one item. In our array that would mean that “rabbit” got removed. splice() will return new array as result.
+
+const animals = ['dog', 'cat', 'rabbit', 'shark', 'sloth'];
+animals.splice(2, 1);
+console.log(animals); // ["dog", "cat", "shark", "sloth"]
+9 includes()
+includes() will check every item in the array, and check if any of them includes our condition. It will return boolean.
+
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// expected output: true
+
+const pets = ['cat', 'dog', 'bat'];
+
+console.log(pets.includes('cat'));  //  true
+
+console.log(pets.includes('at'));  //  false
+10 reverse()
+reverse() method reverses an array. Be careful since reverse() is destructive which means it changes the original array.
+
+const array1 = ['one', 'two', 'three', 'four'];
+console.log(array1);  //  ["one", "two", "three", "four"]
+
+const reversed = array1.reverse();
+console.log(reversed);  //  ["four", "three", "two", "one"]
+
+ 
+Related Posts
+Subscribe to Our Newsletter
+
+
+The Daily Tech Talk © 2021 - All Rights Reserved
