@@ -1,0 +1,155 @@
+https://www.csestack.org/file-handling-python-program-example/
+
+7 FILE HANDLING OPERATIONS IN PYTHON EXPLAINED WITH PROGRAMMING EXAMPLES
+
+
+Table of Contents	
+File Handling in Python
+How to Create a File in Python?
+How to open the File in Python?
+How to Read File in Python?
+How to Read Line-by-Line File into List?
+How to Write a File in Python?
+How to Close a File in Python?
+How to Delete File in Python?
+What are the different File Modes in Python?
+Best Practices for File Handling
+Problems for File Handling in Python for Practice [Homework]
+Conclusion
+
+
+HOW TO CREATE A FILE IN PYTHON?
+
+open("myFile.txt", "w+")
+
+There are two arguments are passed to the open() builtin function- the name of the file and mode the file (w+).
+
+Here,
+
+w – Create the file in write mode
++ – Create a file if it’s not present in the current directory
+
+
+HOW TO OPEN THE FILE IN PYTHON?.
+
+
+open("myFile.txt", "r") as fOb
+
+HOW TO READ FILE IN PYTHON?
+
+open("myFile.txt") as fObj 
+    data = fObj.read() 
+    print(data)
+All the file contents will be saved in a single string object.
+
+You can also use “with” statement with an open file.
+
+
+with open("myFile.txt") as fObj:
+    data = fObj.read()
+    print(data)
+
+
+HOW TO READ LINE-BY-LINE FILE INTO LIST?
+
+Rather than reading complete file text in a single string object, what if you want to read the file line-by-line?
+
+
+with open("myFile.txt") as fObj:
+    liData = fObj.readlines()
+    print(liData)
+Each line in the file will be saved as one element in the list. So the size of the list will be the same as the number of lines in the file.
+
+Reading a file in the list is very important when you want to manipulate the text in each line of the file. After reading file content in the list, you just need to loop over each element in the list and perform your desired operation.
+
+
+HOW TO WRITE A FILE IN PYTHON?
+
+Two operations. First, open the file and then write the text content in it.
+
+The file object has a write() method associated with it to write the text in the file.
+
+
+with open("myFile.txt", 'a+') as fOut:
+    fOut.write("my data to add."+'\n')
+Here,
+
+We are opening the file in “a+” mode so that, it will append the new content at the end of the file.
+The “\n” character is used to add the next in a new line.
+
+
+HOW TO CLOSE A FILE IN PYTHON?
+It is always good practice to close the file after using it.
+
+Python code to close and delete the file object if you are not performing any file operation further.
+
+
+open("myFile.txt", "r") as fObj
+#perform file operations
+fObj.close()
+Otherwise,
+
+Use “with” statement while opening the file. You don’t need to explicitly close the file object. As soon as the pointer goes out of the with statement block, the file object will be closed.
+
+
+with open("myFile.txt", "r") as fObj:
+    #perform file operations
+#file is closed automatically
+How to Delete File in Python?
+Many times you need to delete the file instead of closing it.
+
+If you try to delete the file which is not present, it will throw an I/O error.
+
+Always check the file existence. If the file present, delete it.
+
+
+import os
+#delete file if it exists.
+if os.path.exists("yourFile.txt"):
+    os.remove("yourFile.txt")
+The “path” and “remove” objects are described in the os module. So, you have to import the “os” module.
+
+
+
+WHAT ARE THE DIFFERENT FILE MODES IN PYTHON?
+There are multiple modes to open the file.
+
+“r” mode: Open the file in reading mode. The pointer will be assigned at the beginning of the file. It will throw an error if the file does not exist.
+
+“r+” mode: Open the file for reading writing. The pointer will be assigned at the beginning of the file to read and write a file. It will throw an I/O error if the file not exist.
+
+“w” mode: Open the file in write mode. The pointer will be assigned at the beginning of the file and it will overwrite all the contents in the file.
+
+“w+” mode: Open the file in read-write mode. All the data in the existing file will be truncated (delete and throw away) and overwritten.
+
+
+“a” mode: Open file in append mode. Instead of overwriting original content, in this mode, you can append the new content at the end of the file. If the file is not present, a new file will be created with the file name mentioned
+
+“a+” mode: Open the file in append mode. If the file does not exist, it will create a new file. It will append the new content at the end.  The existing content in the file will be intact.
+
+As we can use both ‘r+’ and ‘w+’ mode for reading and writing a file, they are more confusing. Read the difference between ‘r+’ and ‘w+’ mode in Python.
+
+WHAT IS THE DEFAULT FILE MODE?
+
+If you don’t mention the file mode while opening the file, ‘r’ will be the default file mode
+
+Best Practices for File Handling
+1. Assign File Name to the Variable:
+
+If you are reading and writing files multiple times, always create the variable for the file name. So you don’t need to assign file names every time in your program.
+
+
+FILE_EMP = "empFile.txt"
+with open(FILE_EMP) as fEmp: 
+    liEmp = fEmp.readlines()
+Even in the future if you need to change the file name, you just have to change the new file name in a variable. Otherwise, you have to update the text file everywhere you have used through your project. Its time consuming and not good practice.
+
+2. Choose Right Mode to Read, Write or Append File
+
+If you don’t want your program to write the file, always open the file only for reading.
+
+The opening file in write mode will erase the original content in the file and will add new content. If you want your program to append the new content at the end of the file, always open a file in append mode.
+
+3. Closing file object after using it. 
+
+Otherwise, it is always a good choice to use” with” statement while opening the file.

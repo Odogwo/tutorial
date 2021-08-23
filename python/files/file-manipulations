@@ -1,0 +1,45 @@
+
+https://www.csestack.org/randomly-select-item-from-list-in-python/
+
+CODE TO FIND UNIQUE ELEMENTS FROM LIST IN PYTHON:
+
+Take a list of all the computer languages. And there are some languages repeated in the list. You are asked to find all the different languages list.
+
+
+listCompLang =['CPP', 'C', 'Python', 'CPP', 'Java', 'Java']
+print set(listCompLang)
+Output:
+
+set(['CPP', 'Python', 'C', 'Java'])
+The problem with a set is, you can not access set elements directly unlike list. So convert it into a list first and then use it as follows.
+
+
+listCompLang =['CPP', 'C', 'Python', 'CPP', 'Java', 'Java']
+listUniqueCL = list(set(listCompLang))
+print listUniqueCL;
+Output:
+
+['CPP', 'Python', 'C', 'Java']
+In the output, you can see none of the computer languages are repeated.
+
+Note: I have tested this program on python 2.6 version. If you are running the same program on Python 3, you need to use print statement with bracket.
+
+-----------------------------------------------------------------------
+RANDOMLY SELECT ITEM FROM LIST IN PYTHON USING RANDOM.CHOICE() METHOD:
+
+import random
+player = ['Kohli', 'Tendulkar', 'ABD', 'Ponting', 'Kallis']
+print(random.choice(player))
+
+
+
+RANDOMLY SELECT ITEM FROM LIST IN PYTHON USING NUMPY MODULE:
+
+You can use Numpy module as well. It works fine for all Python versions.
+
+Numpy module does not come with Python binaries, you need to install this module using the pip tool.
+
+
+import numpy
+player = ['Kohli', 'Tendulkar', 'ABD', 'Ponting', 'Kallis']
+print numpy.random.choice(player)

